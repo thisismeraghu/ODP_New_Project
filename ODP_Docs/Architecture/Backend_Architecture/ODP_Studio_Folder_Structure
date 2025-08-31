@@ -1,0 +1,35 @@
+ODP_Studio_Api/
+│
+├── src/
+│   ├── ODP_Studio_Api.Api/              # Presentation layer (ASP.NET Core Web API)
+│   │   ├── Controllers/                 # API Controllers
+│   │   ├── Extensions/                  # Middleware, DI extensions
+│   │   ├── Filters/                     # API filters (authorization, validation)
+│   │   ├── Models/                      # Request/Response DTOs
+│   │   └── Program.cs, Startup.cs       # Application startup
+│   │
+│   ├── ODP_Studio_Api.Application/     # Application layer
+│   │   ├── Commands/                    # CQRS Command requests
+│   │   ├── CommandHandlers/             # Command Handler implementations
+│   │   ├── Queries/                     # CQRS Query requests
+│   │   ├── QueryHandlers/               # Query Handler implementations
+│   │   ├── Behaviors/                   # Mediator pipeline behaviors (e.g., logging, validation)
+│   │   ├── DTOs/                        # Data Transfer Objects
+│   │   ├── Interfaces/                  # Service interfaces (e.g., repository interfaces)
+│   │   └── Services/                    # Application services (business logic)
+│   │
+│   ├── ODP_Studio_Api.Domain/          # Domain layer
+│   │   ├── Entities/                   # Domain entities
+│   │   ├── ValueObjects/               # Value objects
+│   │   ├── Exceptions/                 # Domain-specific exceptions
+│   │   ├── Events/                     # Domain events
+│   │   └── Interfaces/                 # Domain interfaces
+│   │
+│   ├── ODP_Studio_Api.Infrastructure/ # Infrastructure layer
+│   │   ├── Persistence/                # Database context, migrations, repository implementations
+│   │   ├── Services/                   # External services implementations (e.g., Email, Logging)
+│   │   └── Config/                     # Configuration classes (e.g., EF mappings)
+│
+├── tests/
+│   ├── ODP_Studio_Api.UnitTests/       # Unit tests for Domain, Application layers
+│   └── ODP_Studio_Api.IntegrationTests/ # Integration and end-to-end tests

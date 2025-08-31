@@ -1,0 +1,13 @@
+2025-08-29 18:40:09.449 +05:30 [INF] Now listening on: https://localhost:7011
+2025-08-29 18:40:09.485 +05:30 [INF] Now listening on: http://localhost:5193
+2025-08-29 18:40:09.567 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-29 18:40:09.568 +05:30 [INF] Hosting environment: Development
+2025-08-29 18:40:09.570 +05:30 [INF] Content root path: D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api
+2025-08-29 18:40:10.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7011/swagger/index.html - null null
+2025-08-29 18:40:10.379 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7011/swagger/index.html - 200 null text/html;charset=utf-8 205.7474ms
+2025-08-29 18:40:10.386 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-29 18:40:10.394 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.2713ms
+2025-08-29 18:40:10.395 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7011/_vs/browserLink - null null
+2025-08-29 18:40:10.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7011/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.9086ms
+2025-08-29 18:40:10.499 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7011/swagger/v1/swagger.json - null null
+2025-08-29 18:40:10.619 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.0023ms

@@ -1,0 +1,11 @@
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\bin\Debug\net8.0\ODP_Studio_Api.Domain.deps.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\bin\Debug\net8.0\ODP_Studio_Api.Domain.dll
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\bin\Debug\net8.0\ODP_Studio_Api.Domain.pdb
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.AssemblyInfoInputs.cache
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.AssemblyInfo.cs
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.dll
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\refint\ODP_Studio_Api.Domain.dll
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.pdb
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ref\ODP_Studio_Api.Domain.dll

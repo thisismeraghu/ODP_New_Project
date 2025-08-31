@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TEKVEX Software Solutions</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="background-canvas" aria-hidden="true"></canvas>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="TEKVEX logo with icon and text">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" stroke="#00adb5" stroke-width="4" fill="none" />
+        <path d="M20 32h24M32 20v24" stroke="#00adb5" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span>TEKVEX</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item active" data-target="home" tabindex="0">Home</li>
+      <li class="nav-item" data-target="about" tabindex="0">About</li>
+      <li class="nav-item" data-target="services" tabindex="0">Services</li>
+      <li class="nav-item" data-target="product" tabindex="0">Products</li>
+      <li class="nav-item" data-target="contact" tabindex="0">Contact</li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0" aria-expanded="false" aria-controls="nav-links">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <section id="home" tabindex="0" aria-label="Home section">
+    <div class="intro-text">
+      <h1>Innovate with TEKVEX</h1>
+      <p>The future of software solutions tailored for your business success. Cutting-edge technology meets seamless experience.</p>
+      <button id="learn-more-btn" aria-describedby="about-desc">Learn More</button>
+    </div>
+    <div class="image-container" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Modern technology abstract" />
+    </div>
+  </section>
+
+  <section id="about" tabindex="0" aria-label="About TEKVEX" style="display:none;">
+    <h2 id="about-desc">About Us</h2>
+    <div class="content">
+      <p>TEKVEX specializes in state-of-the-art software solutions that drive innovation and efficiency across industries. Our expert team develops scalable applications using the latest technologies to empower businesses and enable digital transformation. With a focus on agile methodologies and user-centered design, we deliver products that meet tomorrow's needs today.</p>
+    </div>
+  </section>
+
+  <section id="services" tabindex="0" aria-label="Services offered by TEKVEX" style="display:none;">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card" tabindex="0" role="article" aria-label="Custom Software Development">
+        <div class="service-icon">💻</div>
+        <h3 class="service-title">Custom Software Development</h3>
+        <p class="service-description">Tailored software solutions built to fit your unique business requirements with scalability and performance.</p>
+      </div>
+      <div class="service-card" tabindex="0" role="article" aria-label="Cloud Integration">
+        <div class="service-icon">☁️</div>
+        <h3 class="service-title">Cloud Integration</h3>
+        <p class="service-description">Seamless cloud strategy and integration services for enhanced accessibility and data security.</p>
+      </div>
+      <div class="service-card" tabindex="0" role="article" aria-label="AI & Machine Learning">
+        <div class="service-icon">🤖</div>
+        <h3 class="service-title">AI & Machine Learning</h3>
+        <p class="service-description">Harness the power of AI to automate processes and gain predictive insights for smarter decisions.</p>
+      </div>
+      <div class="service-card" tabindex="0" role="article" aria-label="Mobile App Development">
+        <div class="service-icon">📱</div>
+        <h3 class="service-title">Mobile App Development</h3>
+        <p class="service-description">Innovative mobile applications to engage customers and streamline operations on the go.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="product" tabindex="0" aria-label="Products offered by TEKVEX" style="display:none;">
+  <h2>Our Products</h2>
+  <div class="product-grid">
+    <div class="product-card" tabindex="0" role="article">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Cloud Infrastructure Product" />
+      <p class="product-title">Cloud Infrastructure</p>
+    </div>
+    <div class="product-card" tabindex="0" role="article">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="AI Analytics Platform" />
+      <p class="product-title">AI Analytics Platform</p>
+    </div>
+    <div class="product-card" tabindex="0" role="article">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Mobile Apps Suite" />
+      <p class="product-title">Mobile Apps Suite</p>
+    </div>
+    <div class="product-card" tabindex="0" role="article">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Custom Software Package" />
+      <p class="product-title">Custom Software Package</p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" tabindex="0" aria-label="Contact TEKVEX" style="display:none;">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form id="contactForm" aria-describedby="contactHelpText">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your email address" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
+        <button type="submit">Send Message</button>
+        <p id="contactHelpText" role="alert" style="margin-top:10px;color:#00ffc8;display:none;">Thank you for contacting us! We will get back to you shortly.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 TEKVEX Software Solutions | Empowering innovation through technology</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

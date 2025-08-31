@@ -1,0 +1,415 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f111a;
+  color: #e0e6f1;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+a {
+  color: #00adb5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header and Navigation */
+header {
+  background: rgba(20, 27, 41, 0.85);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.85);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: default;
+}
+.logo svg {
+  height: 40px;
+  width: 40px;
+  fill: #00adb5;
+  filter: drop-shadow(0 0 2px #00ffc8);
+}
+.logo span {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #00adb5;
+}
+ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+ul.nav-links li {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+ul.nav-links li:hover, ul.nav-links li.active {
+  color: #00ffc8;
+}
+
+/* Hamburger Menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #00adb5;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Sections and content */
+section {
+  padding: 80px 0;
+  position: relative;
+  border-radius: 20px;
+  transition: background 0.6s ease, box-shadow 0.6s ease;
+}
+section:hover {
+  background: rgba(0, 173, 181, 0.15);
+  box-shadow: 0 0 40px 10px rgba(0, 255, 200, 0.3);
+}
+section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #00adb5;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  user-select: none;
+}
+/* Home Section */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding-top: 120px;
+}
+#home .intro-text {
+  flex: 1 1 400px;
+  position: relative;
+  z-index: 3;
+}
+#home .intro-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #00ffc8;
+  text-shadow: 0 0 15px #00ffc8cc;
+}
+#home .intro-text p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #c9d1d9;
+}
+#home .intro-text button {
+  background: #00adb5;
+  border: none;
+  color: #0f111a;
+  font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 15px -4px #00adb5bb;
+}
+#home .intro-text button:hover {
+  background: #00ffc8;
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px -4px #00ffc8dd;
+}
+#home .image-container {
+  flex: 1 1 350px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+#home .image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #00adb5cc;
+  transition: transform 0.6s ease;
+}
+#home .image-container img:hover {
+  transform: scale(1.1) rotate(7deg);
+  box-shadow: 0 0 80px #00ffc8ff;
+}
+
+/* About Section */
+#about .content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #c9d1d9;
+  line-height: 1.7;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* Services Section */
+#services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.service-card {
+  background: #141b29;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px #00adb530;
+  transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  cursor: default;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeSlideUp;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.service-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.service-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.service-card:hover {
+  box-shadow: 0 0 50px #00ffc8cc;
+  transform: translateY(-15px) scale(1.08);
+}
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #00adb5;
+  user-select: none;
+  text-shadow: 0 0 8px #00adb5bb;
+}
+.service-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ffc8;
+  text-transform: uppercase;
+  user-select: none;
+  text-shadow: 0 0 12px #00ffc8cc;
+}
+.service-description {
+  color: #c9d1d9;
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact .contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contact label {
+  font-weight: 600;
+  color: #00adb5;
+  user-select: none;
+}
+#contact input, #contact textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  resize: none;
+  background: #1f2a3a;
+  color: #e0e6f1;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #6c7a8e;
+}
+#contact input:focus, #contact textarea:focus {
+  outline: none;
+  background: #19232d;
+  color: #fff;
+  box-shadow: 0 0 12px #00adb5;
+}
+#contact button {
+  background: #00adb5;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  color: #0f111a;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px -4px #00adb5bb;
+}
+#contact button:hover {
+  background: #00ffc8;
+  box-shadow: 0 8px 30px -4px #00ffc8dd;
+}
+
+/* Footer */
+footer {
+  background: #141b29;
+  color: #00adb5;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1rem;
+  border-top: 1px solid #00adb5;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  ul.nav-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    height: calc(100% - 70px);
+    background: #0f111a;
+    flex-direction: column;
+    width: 200px;
+    gap: 30px;
+    padding: 40px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 15px rgba(0, 173, 181, 0.5);
+  }
+  ul.nav-links.open {
+    transform: translateX(0);
+  }
+}
+
+/* Fade and slide-up animation for service cards */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Background Shapes - Particles */
+#background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+}
+/* Product Section */
+#product .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #141b29;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00adb530;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  text-align: center;
+  user-select: none;
+  padding-bottom: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img,
+.product-card:focus img {
+  transform: scale(1.05);
+}
+
+.product-card:hover,
+.product-card:focus {
+  box-shadow: 0 0 45px #00ffc899;
+  transform: translateY(-10px);
+}
+
+.product-title {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #00ffc8;
+  font-size: 1.2rem;
+  user-select: text;
+}

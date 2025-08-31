@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TEKVEX Software Solutions</title>
+<style>
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f111a;
+    color: #e0e6f1;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+  }
+  a {
+    color: #00adb5;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Header and Navigation */
+  header {
+    background: rgba(20, 27, 41, 0.85);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    backdrop-filter: saturate(180%) blur(12px);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.85);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: default;
+  }
+  .logo svg {
+    height: 40px;
+    width: 40px;
+    fill: #00adb5;
+    filter: drop-shadow(0 0 2px #00ffc8);
+  }
+  .logo span {
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #00adb5;
+  }
+  ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  ul.nav-links li {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  ul.nav-links li:hover, ul.nav-links li.active {
+    color: #00ffc8;
+  }
+  
+  /* Hamburger Menu for mobile */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #00adb5;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Sections and content */
+  section {
+    padding: 80px 0;
+    position: relative;
+    border-radius: 20px;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
+  }
+  section:hover {
+    background: rgba(0, 173, 181, 0.15);
+    box-shadow: 0 0 40px 10px rgba(0, 255, 200, 0.3);
+  }
+  section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #00adb5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  /* Home Section */
+  #home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 120px;
+  }
+  #home .intro-text {
+    flex: 1 1 400px;
+    position: relative;
+    z-index: 3;
+  }
+  #home .intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #00ffc8;
+    text-shadow: 0 0 15px #00ffc8cc;
+  }
+  #home .intro-text p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #c9d1d9;
+  }
+  #home .intro-text button {
+    background: #00adb5;
+    border: none;
+    color: #0f111a;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 15px -4px #00adb5bb;
+  }
+  #home .intro-text button:hover {
+    background: #00ffc8;
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px -4px #00ffc8dd;
+  }
+  #home .image-container {
+    flex: 1 1 350px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+  }
+  #home .image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px #00adb5cc;
+    transition: transform 0.6s ease;
+  }
+  #home .image-container img:hover {
+    transform: scale(1.1) rotate(7deg);
+    box-shadow: 0 0 80px #00ffc8ff;
+  }
+
+  /* About Section */
+  #about .content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #c9d1d9;
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Services Section */
+  #services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .service-card {
+    background: #141b29;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 15px #00adb530;
+    transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    cursor: default;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-name: fadeSlideUp;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .service-card:nth-child(1) {
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  .service-card:nth-child(2) {
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+  }
+  .service-card:nth-child(3) {
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+  }
+  .service-card:nth-child(4) {
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+  }
+  .service-card:hover {
+    box-shadow: 0 0 50px #00ffc8cc;
+    transform: translateY(-15px) scale(1.08);
+  }
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #00adb5;
+    user-select: none;
+    text-shadow: 0 0 8px #00adb5bb;
+  }
+  .service-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00ffc8;
+    text-transform: uppercase;
+    user-select: none;
+    text-shadow: 0 0 12px #00ffc8cc;
+  }
+  .service-description {
+    color: #c9d1d9;
+    font-size: 1.1rem;
+  }
+
+  /* Contact Section */
+  #contact .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #contact label {
+    font-weight: 600;
+    color: #00adb5;
+    user-select: none;
+  }
+  #contact input, #contact textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+    background: #1f2a3a;
+    color: #e0e6f1;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  #contact input::placeholder,
+  #contact textarea::placeholder {
+    color: #6c7a8e;
+  }
+  #contact input:focus, #contact textarea:focus {
+    outline: none;
+    background: #19232d;
+    color: #fff;
+    box-shadow: 0 0 12px #00adb5;
+  }
+  #contact button {
+    background: #00adb5;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    color: #0f111a;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px -4px #00adb5bb;
+  }
+  #contact button:hover {
+    background: #00ffc8;
+    box-shadow: 0 8px 30px -4px #00ffc8dd;
+  }
+
+  /* Footer */
+  footer {
+    background: #141b29;
+    color: #00adb5;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 1rem;
+    border-top: 1px solid #00adb5;
+    user-select: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #home {
+      flex-direction: column;
+      padding-top: 80px;
+    }
+    .hamburger {
+      display: flex;
+    }
+    ul.nav-links {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      height: calc(100% - 70px);
+      background: #0f111a;
+      flex-direction: column;
+      width: 200px;
+      gap: 30px;
+      padding: 40px 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -4px 0 15px rgba(0, 173, 181, 0.5);
+    }
+    ul.nav-links.open {
+      transform: translateX(0);
+    }
+  }
+
+  /* Floating animation for service cards */
+  @keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(0px);
+      filter: drop-shadow(0 0 6px rgba(0, 173, 181, 0.3));
+    }
+    50% {
+      transform: translateY(-10px);
+      filter: drop-shadow(0 10px 18px rgba(0, 255, 200, 0.6));
+    }
+  }
+
+  /* Fade and slide-up animation for service cards */
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animated Background Shapes - Particles */
+  #background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="background-canvas" aria-hidden="true"></canvas>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="TEKVEX logo with icon and text">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" stroke="#00adb5" stroke-width="4" fill="none" />
+        <path d="M20 32h24M32 20v24" stroke="#00adb5" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span>TEKVEX</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item active" data-target="home" tabindex="0">Home</li>
+      <li class="nav-item" data-target="about" tabindex="0">About</li>
+      <li class="nav-item" data-target="services" tabindex="0">Services</li>
+      <li class="nav-item" data-target="contact" tabindex="0">Contact</li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0" aria-expanded="false" aria-controls="nav-links">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <section id="home" tabindex="0" aria-label="Home section">
+    <div class="intro-text">
+      <h1>Innovate with TEKVEX</h1>
+      <p>The future of software solutions tailored for your business success. Cutting-edge technology meets seamless experience.</p>
+      <button id="learn-more-btn" aria-describedby="about-desc">Learn More</button>
+    </div>
+    <div class="image-container" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Modern technology abstract" />
+    </div>
+  </section>
+
+  <section id="about" tabindex="0" aria-label="About TEKVEX" style="display:none;">
+    <h2 id="about-desc">About Us</h2>
+    <div class="content">
+      <p>TEKVEX specializes in state-of-the-art software solutions that drive innovation and efficiency across industries. Our expert team develops scalable applications using the latest technologies to empower businesses and enable digital transformation. With a focus on agile methodologies and user-centered design, we deliver products that meet tomorrow's needs today.</p>
+    </div>
+  </section>
+
+  <section id="services" tabindex="0" aria-label="Services offered by TEKVEX" style="display:none;">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card" tabindex="0" role="article" aria-label="Custom Software Development" style="animation-play-state: running; animation-fill-mode: forwards;">
+        <div class="service-icon">💻</div>
+        <h3 class="service-title">Custom Software Development</h3>
+        <p class="service-description">Tailored software solutions built to fit your unique business requirements with scalability and performance.</p>
+      </div>
+      <div class="service-card" tabindex="0" role="article" aria-label="Cloud Integration" style="animation-play-state: running; animation-fill-mode: forwards;">
+        <div class="service-icon">☁️</div>
+        <h3 class="service-title">Cloud Integration</h3>
+        <p class="service-description">Seamless cloud strategy and integration services for enhanced accessibility and data security.</p>
+      </div>
+      <div class="service-card" tabindex="0" role="article" aria-label="AI & Machine Learning" style="animation-play-state: running; animation-fill-mode: forwards;">
+        <div class="service-icon">🤖</div>
+        <h3 class="service-title">AI & Machine Learning</h3>
+        <p class="service-description">Harness the power of AI to automate processes and gain predictive insights for smarter decisions.</p>
+      </div>
+      <div class="service-card" tabindex="0" role="article" aria-label="Mobile App Development" style="animation-play-state: running; animation-fill-mode: forwards;">
+        <div class="service-icon">📱</div>
+        <h3 class="service-title">Mobile App Development</h3>
+        <p class="service-description">Innovative mobile applications to engage customers and streamline operations on the go.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" tabindex="0" aria-label="Contact TEKVEX" style="display:none;">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form id="contactForm" aria-describedby="contactHelpText">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your email address" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
+        <button type="submit">Send Message</button>
+        <p id="contactHelpText" role="alert" style="margin-top:10px;color:#00ffc8;display:none;">Thank you for contacting us! We will get back to you shortly.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 TEKVEX Software Solutions | Empowering innovation through technology</p>
+</footer>
+
+<script>
+  // Navigation interaction
+  const navLinks = document.querySelectorAll('.nav-item');
+  const sections = ['home', 'about', 'services', 'contact'];
+  const hamburger = document.getElementById('hamburger');
+  const navLinksContainer = document.getElementById('nav-links');
+  const learnMoreBtn = document.getElementById('learn-more-btn');
+
+  function setActiveSection(targetId) {
+    sections.forEach((secId) => {
+      const sec = document.getElementById(secId);
+      if (secId === targetId) {
+        sec.style.display = 'block';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.target === targetId);
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      setActiveSection(link.dataset.target);
+      if (navLinksContainer.classList.contains('open')) {
+        navLinksContainer.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    link.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        link.click();
+      }
+    });
+  });
+
+  hamburger.addEventListener('click', () => {
+    navLinksContainer.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+  });
+  hamburger.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      hamburger.click();
+    }
+  });
+
+  learnMoreBtn.addEventListener('click', () => {
+    setActiveSection('about');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Contact form submission interaction
+  const contactForm = document.getElementById('contactForm');
+  const contactHelpText = document.getElementById('contactHelpText');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    contactHelpText.style.display = 'block';
+    contactForm.reset();
+    setTimeout(() => {
+      contactHelpText.style.display = 'none';
+    }, 5000);
+  });
+
+  // Initialize default section
+  setActiveSection('home');
+
+  // Background canvas for interactive particles
+  const canvas = document.getElementById('background-canvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let particlesArray = [];
+  const particleCount = 60;
+
+  class Particle {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.size = 2 + Math.random() * 3;
+      this.speedX = (Math.random() - 0.5) * 0.7;
+      this.speedY = (Math.random() - 0.5) * 0.7;
+      this.opacity = 0.1 + Math.random() * 0.3;
+      this.color = 'rgba(0, 173, 181, ' + this.opacity + ')';
+    }
+    update(mouse) {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      // Wrap around edges
+      if (this.x < 0) this.x = width;
+      if (this.x > width) this.x = 0;
+      if (this.y < 0) this.y = height;
+      if (this.y > height) this.y = 0;
+
+      // Repel from mouse
+      if (mouse.x && mouse.y) {
+        let dx = this.x - mouse.x;
+        let dy = this.y - mouse.y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          let angle = Math.atan2(dy, dx);
+          let repelForce = (100 - dist) / 100 * 2;
+          this.x += Math.cos(angle) * repelForce;
+          this.y += Math.sin(angle) * repelForce;
+        }
+      }
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = 'rgba(0, 255, 200, 0.7)';
+      ctx.shadowBlur = 10;
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function init() {
+    resizeCanvas();
+    particlesArray = [];
+    for (let i = 0; i < particleCount; i++) {
+      particlesArray.push(new Particle());
+    }
+  }
+
+  function resizeCanvas() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+  }
+
+  const mouse = { x: null, y: null };
+
+  window.addEventListener('resize', init);
+  window.addEventListener('mousemove', function(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  window.addEventListener('mouseout', function() {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    particlesArray.forEach(p => {
+      p.update(mouse);
+      p.draw();
+    });
+    connectParticles();
+    requestAnimationFrame(animate);
+  }
+
+  function connectParticles() {
+    let maxDistance = 120;
+    for (let a = 0; a < particlesArray.length; a++) {
+      for (let b = a + 1; b < particlesArray.length; b++) {
+        let dx = particlesArray[a].x - particlesArray[b].x;
+        let dy = particlesArray[a].y - particlesArray[b].y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < maxDistance) {
+          ctx.strokeStyle = 'rgba(0, 173, 181,' + (1 - dist / maxDistance) * 0.4 + ')';
+          ctx.lineWidth = 1;
+          ctx.shadowColor = 'rgba(0, 255, 200, 0.3)';
+          ctx.shadowBlur = 8;
+          ctx.beginPath();
+          ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+          ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  init();
+  animate();
+</script>
+
+</body>
+</html>

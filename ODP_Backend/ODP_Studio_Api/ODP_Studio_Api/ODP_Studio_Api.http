@@ -1,0 +1,6 @@
+@ODP_Studio_Api_HostAddress = http://localhost:5193
+
+GET {{ODP_Studio_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
