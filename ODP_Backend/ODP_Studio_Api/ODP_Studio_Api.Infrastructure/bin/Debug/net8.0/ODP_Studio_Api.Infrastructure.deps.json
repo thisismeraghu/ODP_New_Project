@@ -240,7 +240,10 @@
       },
       "ODP_Studio_Api.Domain/1.0.0": {
         "runtime": {
-          "ODP_Studio_Api.Domain.dll": {}
+          "ODP_Studio_Api.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

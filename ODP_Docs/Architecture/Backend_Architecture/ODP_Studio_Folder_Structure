@@ -1,3 +1,10 @@
+-> Onion/Clean Architecture Structure.
+-> CQRS with MediatR Design Patterns.
+-> Dot net 8.0
+-> Entity Framework Core for Data Access.
+-> Middlewares for Cross-Cutting Concerns.
+
+
 ODP_Studio_Api/
 │
 ├── src/

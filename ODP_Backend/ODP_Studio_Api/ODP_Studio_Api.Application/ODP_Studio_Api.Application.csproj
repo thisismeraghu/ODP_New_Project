@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Behaviors\" />
+    <Folder Include="Validators\" />
     <Folder Include="QueryHandlers\" />
     <Folder Include="Queries\" />
     <Folder Include="Services\" />

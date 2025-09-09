@@ -1,0 +1,49 @@
+
+ODP : Orphan Development Product
+-------------------------------------
+
+Usecases:
+    1. Orphan data maintain -> Register , View , Update  , Adopt 
+    2. Orphan problems -> Create, View , Associate, Post 
+    3. Orpphanage Donate - Companies, Mutt, Peoples , Adopt 
+        -> Companies : Create company, View, Update, Delete 
+
+    platform 
+
+
+    ODP_Studio : Web Application : Orphanage Management.: Orphanage(Org) 
+        -> Usecase
+            1. User Login :
+            2. Orphan : Create Orphan, Vew Orphan info, Update Orphan Info, Delete Orphan info
+
+    ODP_Studio : Web Application
+    -> FrontEnd : React.js latest version (HTML,CSS,Javascript)
+    -> Backend : DotNet 8, (c#, EntityFramework, Microsewrvices)
+    -> Database : SQLServer (Queries, SP's)
+
+
+    FrontEnd: (Chittaranjan, Nayana, Vandana, Anand, Raghu) 
+    Prerequsites. 
+    1. install Node.js, npm and node.
+    2. npm command to install react packages.
+
+    tools: 
+    1. VS Code
+
+    Backend : (Jyo, Krishna, Trupthi, Raghu, Anand)
+    1. C#, Dotnet 
+    2. SQL Server 
+    
+    tools:
+    1. Visual studio 
+    2. SQL Server  
+
+    
+
+    
+
+
+
+ 
+
+

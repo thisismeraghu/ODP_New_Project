@@ -109,11 +109,6 @@ D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\ODP_Studio_Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.build.json
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.development.json
-D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets\msbuild.ODP_Studio_Api.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets\msbuild.build.ODP_Studio_Api.props
-D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ODP_Studio_Api.props
-D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ODP_Studio_Api.props
-D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\scopedcss\bundle\ODP_Studio_Api.styles.css
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\ODP_Stud.FFA67495.Up2Date
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\ODP_Studio_Api.dll
@@ -136,3 +131,12 @@ D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\ODP_Studio_Api.sourcelink.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\net8.0\ODP_Studio_Api.staticwebassets.endpoints.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

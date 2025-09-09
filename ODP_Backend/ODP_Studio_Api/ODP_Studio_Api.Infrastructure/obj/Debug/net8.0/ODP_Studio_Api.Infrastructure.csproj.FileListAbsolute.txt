@@ -13,3 +13,4 @@ D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Infrastruc
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Infrastructure\obj\Debug\net8.0\refint\ODP_Studio_Api.Infrastructure.dll
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Infrastructure\obj\Debug\net8.0\ODP_Studio_Api.Infrastructure.pdb
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Infrastructure\obj\Debug\net8.0\ref\ODP_Studio_Api.Infrastructure.dll
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Infrastructure\obj\Debug\net8.0\ODP_Studio_Api.Infrastructure.sourcelink.json

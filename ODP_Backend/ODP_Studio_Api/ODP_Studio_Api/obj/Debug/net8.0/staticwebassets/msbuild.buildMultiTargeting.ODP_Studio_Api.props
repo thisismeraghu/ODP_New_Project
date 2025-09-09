@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\ODP_Studio_Api.props" />
-</Project>

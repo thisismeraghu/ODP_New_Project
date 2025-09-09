@@ -836,12 +836,18 @@
           "ODP_Studio_Api.Domain": "1.0.0"
         },
         "runtime": {
-          "ODP_Studio_Api.Application.dll": {}
+          "ODP_Studio_Api.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ODP_Studio_Api.Domain/1.0.0": {
         "runtime": {
-          "ODP_Studio_Api.Domain.dll": {}
+          "ODP_Studio_Api.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ODP_Studio_Api.Infrastructure/1.0.0": {
@@ -853,7 +859,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.14.0"
         },
         "runtime": {
-          "ODP_Studio_Api.Infrastructure.dll": {}
+          "ODP_Studio_Api.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

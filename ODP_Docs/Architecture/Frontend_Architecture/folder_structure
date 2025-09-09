@@ -1,0 +1,19 @@
+src/
+  api/                    # API services with typed requests/responses
+  assets/                 # Images, fonts, static assets
+  components/             # Reusable UI components (dumb/presentational)
+  features/               # Domain-specific features/modules
+    auth/                 # Authentication (login, registration, context)
+    orphans/              # Orphan management feature
+    serviceProviders/     # Service provider management
+    problems/             # Problem reporting feature
+  hooks/                  # Custom hooks with typed APIs
+  layouts/                # Layout components (Header, Footer, Sidebar)
+  pages/                  # Route pages (Dashboard, Login, Profile)
+  routes/                 # Router setup and route guards
+  store/                  # State management (e.g. Redux Toolkit, Zustand)
+  styles/                 # Global styles, themes (CSS Modules, Tailwind, etc.)
+  types/                  # Shared and domain-specific TypeScript types/interfaces
+  utils/                  # Utility functions, helpers with type safety
+  App.tsx                 # Root component with router
+  main.tsx                # App entry point
