@@ -11,6 +11,16 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // The URL of your React app
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
@@ -52,6 +62,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowReactApp");
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
