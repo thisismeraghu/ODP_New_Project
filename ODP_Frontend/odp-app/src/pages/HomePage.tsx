@@ -29,7 +29,6 @@ const HomePage: React.FC = () => {
 
     useEffect(() => {
         if (user) {
-        // Login successful, redirect to landing page
         navigate('/landing');
         }
     }, [user, navigate]);
@@ -37,16 +36,11 @@ const HomePage: React.FC = () => {
   const handleLoginSubmit = async (username: string, password: string) => {
     try{
         dispatch(loginAsync({ username, password }));
-        // console.log("Credentials received in HomePage:", { username, password });
-        // const response = await loginUser({ username, password });
-        // setAuth(response.username, response.token);
-
-        // setSnackbarOpen(true);
-        // setTimeout(() => {
-        // setSnackbarOpen(false);
-        // closeLoginDialogBox();
-        // navigate("/landing"); // Redirect to landing page after login
-        // }, 1500);
+        setSnackbarOpen(true);
+        setTimeout(() => {
+        setSnackbarOpen(false);
+        closeLoginDialogBox();
+        }, 1500);
     }catch(error){
         console.error("Login failed:", error);
     }

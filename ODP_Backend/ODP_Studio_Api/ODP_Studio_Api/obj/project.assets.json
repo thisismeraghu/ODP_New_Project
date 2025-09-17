@@ -1342,6 +1342,7 @@
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
           "Microsoft.Extensions.Identity.Core": "9.0.8",
+          "ODP_Studio_Api.Application": "1.0.0",
           "ODP_Studio_Api.Domain": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.14.0"
         },

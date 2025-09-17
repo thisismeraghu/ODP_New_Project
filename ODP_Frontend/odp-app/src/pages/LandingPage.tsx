@@ -5,20 +5,24 @@ import Footer from "../components/Footer";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
-import { useAppSelector } from "../store/hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { logout } from "../features/auth/authSlice";
 
 const LandingPage: React.FC = () => {
   const [notifications, setNotifications] = useState(5);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 // Select user from auth slice
   const user = useAppSelector(state => state.auth.user);
   
   if (!user) {
     return navigate("/");; // or redirect
   }
-  const registerOrphan = () => {
-    alert("Register Orphan Clicked");
+  const handleOnLogout = () => {
+    dispatch(logout());
+    navigate('/'); // Redirect to login after logout
+   // alert("Logged out successfully!");
   };
 
   return (
@@ -34,8 +38,8 @@ const LandingPage: React.FC = () => {
         onNotificationClick={() => alert("Notification clicked!")}
         buttons={[
           {
-            label: "Register Orphan",
-            onClick: registerOrphan,
+            label: "Logout",
+            onClick: handleOnLogout,
             color: "secondary",
             variant: "contained",
           },

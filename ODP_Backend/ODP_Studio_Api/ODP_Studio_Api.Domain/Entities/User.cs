@@ -35,6 +35,8 @@ namespace ODP_Studio_Api.Domain.Entities
         public int? GenderId { get; private set; }
         public string? RefreshToken { get; private set; }
 
+        public ICollection<UserOrgRole> UserOrgRoles { get; set; } = new List<UserOrgRole>();
+
         //Password verification logic(hash comparison)
         public bool VerifyPassword(string password, IPasswordHasher hasher)
         {

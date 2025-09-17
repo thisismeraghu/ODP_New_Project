@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "oK1n0riehF0=",
+  "dgSpecHash": "gR0W20WWRyk=",
   "success": true,
   "projectFilePath": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\raghu\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
+    "C:\\Users\\raghu\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
+    "C:\\Users\\raghu\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\raghu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.8\\microsoft.aspnetcore.cryptography.internal.9.0.8.nupkg.sha512",
     "C:\\Users\\raghu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.8\\microsoft.aspnetcore.cryptography.keyderivation.9.0.8.nupkg.sha512",
     "C:\\Users\\raghu\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",

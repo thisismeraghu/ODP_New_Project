@@ -10,5 +10,6 @@ namespace ODP_Studio_Api.Domain.Interfaces
     public interface IUserRepository
     {
         Task<User?> GetByUsernameAsync(string username);
+        Task<User?> GetUserWithRolesAndOrgAsync(string username);
     }
 }

@@ -179,6 +179,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj": {
+                "projectPath": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj"
+              },
               "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj": {
                 "projectPath": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj"
               }
