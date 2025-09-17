@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ isAuthenticated }) => (
     <Typography variant="body2" color="text.secondary">
       {isAuthenticated
         ? `© ${new Date().getFullYear()} ODP Dashboard`
-        : `© ${new Date().getFullYear()} TEXVEX Software Solutions`}
+        : `© ${new Date().getFullYear()} this is TEXVEX Software Solutions`}
     </Typography>
   </Box>
 );
