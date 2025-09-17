@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ODP_Studio_Api.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a96102ca0f15fdecfe7cef6efebd7f5acefe6766")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9c514b4f3c994bd92170b7542f4995575f973a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ODP_Studio_Api.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ODP_Studio_Api.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
