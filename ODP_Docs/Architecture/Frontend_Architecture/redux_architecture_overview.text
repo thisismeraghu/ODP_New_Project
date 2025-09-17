@@ -1,0 +1,154 @@
+Key Principles & Best Practices
+1. Use Redux Toolkit’s "Slice" Pattern
+Encapsulate state, reducers, and actions for each feature in one place.
+
+Separate concerns clearly by feature domain (e.g., auth, orphan management, company).
+
+This promotes modular, reusable, and testable code.
+
+2. Abstract Reusable Logic into Utility Functions / Classes (OOP)
+Centralize async API logic in reusable service classes or functions.
+
+Use TypeScript interfaces and classes to encapsulate data structures and business rules.
+
+Avoid duplicating API and state update logic across slices.
+
+3. Create Typed Redux Hooks
+Create reusable custom hooks (useAppDispatch, useAppSelector) to enforce typing and reduce code duplication.
+
+4. Use createAsyncThunk for Async Logic
+Simplifies async API calls with automatic pending/fulfilled/rejected actions.
+
+Avoid manual action creators; follow DRY by handling async state cleanly.
+
+5. Centralize API Calls in Service Layer
+Keep API calls outside slices in separate service files.
+
+This follows OOP separation of concerns by decoupling API communication and state management.
+
+6. Organize Code by Domain Feature
+Feature folder structure: each feature folder contains slice, API services, types, and UI components.
+
+E.g. features/auth/, features/orphans/, features/companies/.
+
+Example Folder Structure Optimized for ODP Redux
+text
+src/
+  app/
+    store.ts                 # Redux store setup
+    hooks.ts                 # Typed hooks for dispatch & selector
+  features/
+    auth/
+      authAPI.ts             # All auth-related API calls
+      authSlice.ts           # Redux slice for auth state
+      types.ts               # Auth-specific TS interfaces
+    orphans/
+      orphanAPI.ts
+      orphanSlice.ts
+      types.ts
+  services/
+    apiClient.ts             # Axios instance & interceptors
+  components/
+    common/                  # Reusable dumb UI components
+  pages/
+    HomePage.tsx
+    LandingPage.tsx
+Sample Code Snippets
+app/store.ts — Configure Redux Store
+ts
+import { configureStore } from '@reduxjs/toolkit';
+import authReducer from '../features/auth/authSlice';
+import orphanReducer from '../features/orphans/orphanSlice';
+
+export const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    orphans: orphanReducer,
+  },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+app/hooks.ts — Typed Hooks
+ts
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import type { RootState, AppDispatch } from './store';
+
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+features/auth/authAPI.ts — Service class handling auth API
+ts
+import axios from '../../services/apiClient';
+import type { LoginPayload, LoginResponse } from './types';
+
+class AuthService {
+  login = (data: LoginPayload): Promise<LoginResponse> =>
+    axios.post('/auth/login', data).then(res => res.data);
+}
+
+export const authService = new AuthService();
+features/auth/authSlice.ts — Feature slice using asyncThunk
+ts
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { authService } from './authAPI';
+import type { LoginPayload, LoginResponse } from './types';
+
+interface AuthState {
+  user: LoginResponse['user'] | null;
+  token: string | null;
+  loading: boolean;
+  error: string | null;
+}
+
+const initialState: AuthState = { user: null, token: null, loading: false, error: null };
+
+export const login = createAsyncThunk<LoginResponse, LoginPayload>(
+  'auth/login',
+  async (payload, { rejectWithValue }) => {
+    try {
+      return await authService.login(payload);
+    } catch (error: any) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  reducers: {
+    logout(state) {
+      state.user = null;
+      state.token = null;
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(login.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(login.fulfilled, (state, action: PayloadAction<LoginResponse>) => {
+        state.user = action.payload.user;
+        state.token = action.payload.token;
+        state.loading = false;
+      })
+      .addCase(login.rejected, (state, action) => {
+        state.error = action.payload as string;
+        state.loading = false;
+      });
+  },
+});
+
+export const { logout } = authSlice.actions;
+export default authSlice.reducer;
+Key Takeaways for Maintainability and DRY
+Keep API calls in service classes (authService, orphanService) separated from Redux slices.
+
+Use typed utility hooks to avoid duplication when accessing dispatch and state.
+
+Encapsulate each feature slice with scoped state and async logic.
+
+Structure folders by features to ease navigation and promote modularity.
+
+Use OOP principles by modeling domain services as classes, enabling easy testing and extension.

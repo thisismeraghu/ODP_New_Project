@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -6,16 +6,17 @@ import Typography from "@mui/material/Typography";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import LoginDialog from "../components/LoginDialog";
-import { loginUser } from "../features/auth/authApi";
-import { useNavigate } from 'react-router-dom';
 import { Snackbar } from "@mui/material";
-import { useAuth } from "../context/AuthContext";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { loginAsync } from "../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const [loginOpen, setLoginOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const navigate = useNavigate(); // Call the hook to get the function
-  const { setAuth } = useAuth();
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const { user, loading, error } = useAppSelector((state) => state.auth);
 
   // Define the handler to close login dialog
   const closeLoginDialogBox = () => {
@@ -26,18 +27,26 @@ const HomePage: React.FC = () => {
     setLoginOpen(true);
   };
 
+    useEffect(() => {
+        if (user) {
+        // Login successful, redirect to landing page
+        navigate('/landing');
+        }
+    }, [user, navigate]);
+    
   const handleLoginSubmit = async (username: string, password: string) => {
     try{
-        console.log("Credentials received in HomePage:", { username, password });
-        const response = await loginUser({ username, password });
-        setAuth(response.user, response.token);
-        
-        setSnackbarOpen(true);
-        setTimeout(() => {
-        setSnackbarOpen(false);
-        closeLoginDialogBox();
-        navigate("/landing"); // Redirect to landing page after login
-        }, 1500);
+        dispatch(loginAsync({ username, password }));
+        // console.log("Credentials received in HomePage:", { username, password });
+        // const response = await loginUser({ username, password });
+        // setAuth(response.username, response.token);
+
+        // setSnackbarOpen(true);
+        // setTimeout(() => {
+        // setSnackbarOpen(false);
+        // closeLoginDialogBox();
+        // navigate("/landing"); // Redirect to landing page after login
+        // }, 1500);
     }catch(error){
         console.error("Login failed:", error);
     }
@@ -62,7 +71,7 @@ const HomePage: React.FC = () => {
               onClick: () => alert("SignUp clicked"),
               color: "secondary",
               variant: "contained",
-            },
+            }
           ]}
         />
         {/* Rest of page */}
@@ -108,6 +117,9 @@ const HomePage: React.FC = () => {
       />
         <Footer />
       </Box>
+      {loading && <p>Logging in...</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {user && <p>Welcome, {user.username}!</p>}
     </>
   );
 };

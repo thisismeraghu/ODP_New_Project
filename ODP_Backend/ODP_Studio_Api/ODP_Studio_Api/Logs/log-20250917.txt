@@ -1,0 +1,7 @@
+2025-09-17 10:22:26.487 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7011/api/login - null null
+2025-09-17 10:22:26.496 +05:30 [INF] CORS policy execution successful.
+2025-09-17 10:22:26.497 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7011/api/login - 204 null null 9.9666ms
+2025-09-17 10:22:26.499 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7011/api/login - application/json 36
+2025-09-17 10:22:26.503 +05:30 [INF] CORS policy execution successful.
+2025-09-17 10:22:26.504 +05:30 [INF] Executing endpoint 'ODP_Studio_Api.Controllers.LoginController.Login (ODP_Studio_Api)'
+2025-09-17 10:22:26.505 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ODP_Studio_Api.Application.DTOs.LoginRequestDto) on controller ODP_Studio_Api.Controllers.LoginController (ODP_Studio_Api).

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ODP_Studio_Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a96102ca0f15fdecfe7cef6efebd7f5acefe6766")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87dd3febe7661ca52902b7e25d2d0db4c7030db4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ODP_Studio_Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ODP_Studio_Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

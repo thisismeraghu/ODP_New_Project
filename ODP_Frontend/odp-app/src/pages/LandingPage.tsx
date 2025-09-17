@@ -4,18 +4,19 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "../store/hooks";
 
 const LandingPage: React.FC = () => {
   const [notifications, setNotifications] = useState(5);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
-  const { user } = useAuth();
-
-//   if (!user) {
-//     return navigate("/");; // or redirect
-//   }
+// Select user from auth slice
+  const user = useAppSelector(state => state.auth.user);
+  
+  if (!user) {
+    return navigate("/");; // or redirect
+  }
   const registerOrphan = () => {
     alert("Register Orphan Clicked");
   };
@@ -23,7 +24,7 @@ const LandingPage: React.FC = () => {
   return (
     <>
       <Header
-        title={user?.name ? user?.name:" User"}
+        title={user ? user.username:" User"}
         backgroundColor="#410069ff"
         titleColor="#b74040ff"
         showSearch

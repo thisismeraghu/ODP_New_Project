@@ -2,25 +2,23 @@
 import React, { createContext, useState, useContext } from 'react';
 
 interface User {
-  id: string;
   username: string;
-  email: string;
 }
 
 interface AuthContextType {
-  user: User | null;
+  user: string | null;
   token: string | null;
-  setAuth: (user: User, token: string) => void;
+  setAuth: (user: string, token: string) => void;
   clearAuth: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<string | null>(null);
   const [token, setToken] = useState<string | null>(null);
 
-   const setAuth = (user: User, token: string) => {
+   const setAuth = (user: string, token: string) => {
     setUser(user);
     setToken(token);
   };
