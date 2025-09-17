@@ -22,11 +22,12 @@ namespace ODP_Studio_Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
+        public async Task<ActionResult<UserLoginInfoDto>> Login([FromBody] LoginRequestDto request)
         {
             var command = _mapper.Map<LoginUserCommand>(request);
             var response = await _mediator.Send(command);
-            return Ok(response);
+            var result = _mapper.Map<UserLoginInfoDto>(response);
+            return Ok(result);
         }
     }
 }

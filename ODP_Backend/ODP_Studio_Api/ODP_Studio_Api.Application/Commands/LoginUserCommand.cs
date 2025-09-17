@@ -8,5 +8,5 @@ using System.Threading.Tasks;
 
 namespace ODP_Studio_Api.Application.Commands
 {
-    public record LoginUserCommand(string Username, string Password) : IRequest<LoginResponseDto>;
+    public record LoginUserCommand(string Username, string Password) : IRequest<UserLoginInfoDto>;
 }
