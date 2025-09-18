@@ -47,3 +47,4 @@ yarn.lock
 
 
 *.pdb, *.exe, *.dll
+ODP_Backend/ODP_Api/**/bin/
