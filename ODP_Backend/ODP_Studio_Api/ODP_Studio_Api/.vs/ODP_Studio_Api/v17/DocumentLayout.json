@@ -3,37 +3,65 @@
   "WorkspaceRootPath": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\commandhandlers\\loginusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\persistence\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\commandhandlers\\loginusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEFFA330-B599-43A8-A8A5-A5A709E3993A}|..\\ODP_Studio_Api.Tests\\ODP_Studio_Api.Tests.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\persistence\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEFFA330-B599-43A8-A8A5-A5A709E3993A}|..\\ODP_Studio_Api.Tests\\ODP_Studio_Api.Tests.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\services\\passwordhasherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\validators\\loginrequestdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\validators\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\validators\\logindtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:validators\\logindtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\logs\\log-20250920.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:logs\\log-20250920.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\logs\\log-20250919.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:logs\\log-20250919.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\logs\\log-20250918.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:logs\\log-20250918.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\logs\\log-20250917.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -43,16 +71,48 @@
       "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\odp_studio_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:odp_studio_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\valueobjects\\credentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\valueobjects\\modifiedinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\valueobjects\\contactinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\valueobjects\\personalinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\entities\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\entities\\org.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\entities\\userorgrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\odp_studio_api.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20653F4-B1C3-45FE-A9DE-175E8556BEBE}|..\\ODP_Studio_Api.Application\\ODP_Studio_Api.Application.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.application\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEFFA330-B599-43A8-A8A5-A5A709E3993A}|..\\ODP_Studio_Api.Tests\\ODP_Studio_Api.Tests.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6235ED23-1B4A-47AB-9D88-C03AE2D415CD}|..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.infrastructure\\services\\passwordhasherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\logs\\log-20250901.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -67,10 +127,6 @@
       "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:logs\\log-20250828.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\exceptions\\authenticationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -80,15 +136,8 @@
       "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api\\odp_studio_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B7EBAFB2-BD04-4687-8D8A-691F940FAC04}|ODP_Studio_Api.csproj|solutionrelative:odp_studio_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDCE412E-35AB-4218-9CBC-40A71CFC5390}|..\\ODP_Studio_Api.Domain\\ODP_Studio_Api.Domain.csproj|d:\\projects\\odp_new_project\\odp_backend\\odp_studio_api\\odp_studio_api.domain\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -101,102 +150,440 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T05:25:30.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T02:18:37.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:53:58.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ErrorHandlingMiddleware.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Middlewares\\ErrorHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Middlewares\\ErrorHandlingMiddleware.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Middlewares\\ErrorHandlingMiddleware.cs",
+              "RelativeToolTip": "Middlewares\\ErrorHandlingMiddleware.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvyoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T10:54:04.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Persistence\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Infrastructure\\Persistence\\Repository\\UserRepository.cs",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Persistence\\Repository\\UserRepository.cs",
               "RelativeToolTip": "..\\ODP_Studio_Api.Infrastructure\\Persistence\\Repository\\UserRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T02:04:16.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Entities\\User.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T01:54:13.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginUserCommandHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAswCkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T05:19:27.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "JwtTokenService.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAApwBUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T02:13:23.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
               "RelativeToolTip": "..\\ODP_Studio_Api.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAApwEYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T03:36:07.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "LoginUserCommandHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\CommandHandlers\\LoginUserCommandHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswCUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T05:19:27.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwB8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T05:25:30.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:38:58.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Tests\\UnitTest1.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T10:43:15.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginRequestDTOValidator.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Validators\\LoginRequestDTOValidator.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\Validators\\LoginRequestDTOValidator.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Validators\\LoginRequestDTOValidator.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\Validators\\LoginRequestDTOValidator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T16:48:27.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAIBJwEMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T03:38:11.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Validators\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\Validators\\ValidationBehavior.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Validators\\ValidationBehavior.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\Validators\\ValidationBehavior.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvx8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T07:42:43.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginDTOValidator.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Validators\\LoginDTOValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\LoginDTOValidator.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Validators\\LoginDTOValidator.cs",
+              "RelativeToolTip": "Validators\\LoginDTOValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T14:14:18.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:47:03.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\DTOs\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T02:18:37.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIAwwBEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T17:38:07.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "log-20250918.txt",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250918.txt",
+              "RelativeDocumentMoniker": "Logs\\log-20250918.txt",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250918.txt",
+              "RelativeToolTip": "Logs\\log-20250918.txt",
+              "ViewState": "AgIAANMBAAAAAAAAAAAQwOQBAAADAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-24T17:23:57.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "log-20250920.txt",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250920.txt",
+              "RelativeDocumentMoniker": "Logs\\log-20250920.txt",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250920.txt",
+              "RelativeToolTip": "Logs\\log-20250920.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-24T17:24:10.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "log-20250919.txt",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250919.txt",
+              "RelativeDocumentMoniker": "Logs\\log-20250919.txt",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250919.txt",
+              "RelativeToolTip": "Logs\\log-20250919.txt",
+              "ViewState": "AgIAACYCAAAAAAAAAAAQwDcCAAADAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-24T17:24:04.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginUserCommand.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T02:18:00.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "log-20250917.txt",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250917.txt",
+              "RelativeDocumentMoniker": "Logs\\log-20250917.txt",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250917.txt",
+              "RelativeToolTip": "Logs\\log-20250917.txt",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAQwIUAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-17T14:38:43.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ODP_Studio_Api.csproj",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\ODP_Studio_Api.csproj",
+              "RelativeDocumentMoniker": "ODP_Studio_Api.csproj",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\ODP_Studio_Api.csproj",
+              "RelativeToolTip": "ODP_Studio_Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-23T01:52:33.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T05:25:33.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Credentials.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\Credentials.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\ValueObjects\\Credentials.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\Credentials.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\ValueObjects\\Credentials.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:43:36.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwBAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:54:13.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ModifiedInfo.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\ModifiedInfo.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\ValueObjects\\ModifiedInfo.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\ModifiedInfo.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\ValueObjects\\ModifiedInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:30:46.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Org.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\Org.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Entities\\Org.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\Org.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Entities\\Org.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwBoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T07:07:26.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ContactInformation.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\ContactInformation.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\ValueObjects\\ContactInformation.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\ContactInformation.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\ValueObjects\\ContactInformation.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIBQwCAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T08:25:17.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PersonalInformation.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\PersonalInformation.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\ValueObjects\\PersonalInformation.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\ValueObjects\\PersonalInformation.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\ValueObjects\\PersonalInformation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T08:24:01.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RoleType.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\RoleType.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Entities\\RoleType.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\RoleType.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Entities\\RoleType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:29:33.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UserOrgRole.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\UserOrgRole.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Entities\\UserOrgRole.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Entities\\UserOrgRole.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Entities\\UserOrgRole.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBZwBQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:30:02.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Infrastructure\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T02:13:23.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:56:20.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ODP_Studio_Api.Infrastructure.csproj",
+              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj",
+              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj",
+              "RelativeToolTip": "..\\ODP_Studio_Api.Infrastructure\\ODP_Studio_Api.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-19T18:32:02.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "PasswordHasherService.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Infrastructure\\Services\\PasswordHasherService.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Infrastructure\\Services\\PasswordHasherService.cs",
@@ -209,237 +596,107 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAApwCYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T03:38:11.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "log-20250917.txt",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250917.txt",
-              "RelativeDocumentMoniker": "Logs\\log-20250917.txt",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250917.txt",
-              "RelativeToolTip": "Logs\\log-20250917.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-09-17T14:38:43.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ErrorHandlingMiddleware.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Middlewares\\ErrorHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "Middlewares\\ErrorHandlingMiddleware.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Middlewares\\ErrorHandlingMiddleware.cs",
-              "RelativeToolTip": "Middlewares\\ErrorHandlingMiddleware.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAApwCMAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T10:54:04.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginUserCommand.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\Commands\\LoginUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T02:18:00.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T01:56:20.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T17:38:07.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginRequestDto.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Application\\DTOs\\LoginRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T01:47:03.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GlobalUsings.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Tests\\GlobalUsings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T11:38:58.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 34,
               "Title": "log-20250901.txt",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250901.txt",
               "RelativeDocumentMoniker": "Logs\\log-20250901.txt",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250901.txt",
               "RelativeToolTip": "Logs\\log-20250901.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-09-01T16:53:57.556Z"
+              "WhenOpened": "2025-09-01T16:53:57.556Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 35,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAiAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-22T06:07:39.053Z"
+              "WhenOpened": "2025-08-22T06:07:39.053Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 36,
               "Title": "log-20250828.txt",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250828.txt",
               "RelativeDocumentMoniker": "Logs\\log-20250828.txt",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Logs\\log-20250828.txt",
               "RelativeToolTip": "Logs\\log-20250828.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABFAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-28T16:38:52.972Z"
+              "WhenOpened": "2025-08-28T16:38:52.972Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T05:25:33.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 37,
               "Title": "AuthenticationException.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\AuthenticationException.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Exceptions\\AuthenticationException.cs",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\AuthenticationException.cs",
               "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Exceptions\\AuthenticationException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAoAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T11:55:46.299Z"
+              "WhenOpened": "2025-08-26T11:55:46.299Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 38,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Interfaces\\IPasswordHasher.cs",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\IPasswordHasher.cs",
               "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Interfaces\\IPasswordHasher.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAFAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T01:58:20.435Z"
+              "WhenOpened": "2025-08-22T01:58:20.435Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ValidationException.cs",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
-              "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
-              "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Exceptions\\ValidationException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T11:53:58.603Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 39,
               "Title": "NotFoundException.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Exceptions\\NotFoundException.cs",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Exceptions\\NotFoundException.cs",
               "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Exceptions\\NotFoundException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T11:55:06.332Z"
+              "WhenOpened": "2025-08-26T11:55:06.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 40,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\appsettings.Development.json",
               "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-22T06:08:22.435Z"
+              "WhenOpened": "2025-08-22T06:08:22.435Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ODP_Studio_Api.csproj",
-              "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\ODP_Studio_Api.csproj",
-              "RelativeDocumentMoniker": "ODP_Studio_Api.csproj",
-              "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api\\ODP_Studio_Api.csproj",
-              "RelativeToolTip": "ODP_Studio_Api.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-23T01:52:33.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 41,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "..\\ODP_Studio_Api.Domain\\Interfaces\\ITokenService.cs",
               "ToolTip": "D:\\Projects\\ODP_New_Project\\ODP_Backend\\ODP_Studio_Api\\ODP_Studio_Api.Domain\\Interfaces\\ITokenService.cs",
               "RelativeToolTip": "..\\ODP_Studio_Api.Domain\\Interfaces\\ITokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwA4AAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T02:10:35.27Z"
+              "WhenOpened": "2025-08-22T02:10:35.27Z",
+              "EditorCaption": ""
             }
           ]
         }

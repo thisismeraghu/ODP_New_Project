@@ -5,42 +5,118 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+using ODP_Studio_Api.Domain.ValueObjects;
+using System.Reflection.Metadata;
 
 namespace ODP_Studio_Api.Domain.Entities
 {
     [Table("User", Schema = "ODPUser")]
     public class User
     {
-        
         public int UserID { get; private set; }
-        public string UserName { get; private set; }
-        public string Password { get; private set; }
-        public string LoginEmail { get; private set; }
-        public string LoginPhone { get; private set; }
+        public Credentials Credentials { get; private set; }
+        public PersonalInformation PersonalInfo { get; private set; } = null!;
+        public ContactInformation ContactInfo { get; private set; } = null!;
+        public ModifiedInfo ModifiedInfo { get; private set; }
+        private readonly List<UserOrgRole> _userOrgRoles = new();
+        public IReadOnlyCollection<UserOrgRole> UserOrgRoles => _userOrgRoles.AsReadOnly();
         public string? ProfilePhoto { get; private set; }
-        public string? FirstName { get; private set; }
-        public string? LastName { get; private set; }
-        public DateTime? DateOfBirth { get; private set; }
-        public int? Age { get; private set; }
-        public string? PhoneNum { get; private set; }
-        public string? Email { get; private set; }
-        public string? Profession { get; private set; }
-        public string? Nationality { get; private set; }
-        public string? City { get; private set; }
         public bool IsActive { get; private set; }
-        public string? fcb { get; private set; }
-        public string? lub { get; private set; }
-        public DateTime? fcd { get; private set; }
-        public DateTime? lud { get; private set; }
-        public int? GenderId { get; private set; }
         public string? RefreshToken { get; private set; }
 
-        public ICollection<UserOrgRole> UserOrgRoles { get; set; } = new List<UserOrgRole>();
+        protected User() { } // For EF Core
 
-        //Password verification logic(hash comparison)
+        public User(int userId, Credentials credentials,
+                    PersonalInformation personalInfo,
+                    ContactInformation contactInfo,
+                    ModifiedInfo modifiedInfo)
+        {
+            UserID = userId;
+            Credentials = credentials ?? throw new ArgumentNullException(nameof(credentials));
+            PersonalInfo = personalInfo ?? throw new ArgumentNullException(nameof(personalInfo));
+            ContactInfo = contactInfo ?? throw new ArgumentNullException(nameof(contactInfo));
+            ModifiedInfo = modifiedInfo ?? throw new ArgumentNullException(nameof(modifiedInfo));
+            IsActive = true;
+        }
+
+        // Behavior methods follow encapsulation and business logic
+
+        public void UpdatePersonalInformation(PersonalInformation personalInformation)
+        {
+            PersonalInfo = personalInformation ?? throw new ArgumentNullException(nameof(personalInformation));
+            UpdateModificationInfo();
+        }
+
+        public void UpdateContactInfo(ContactInformation contactInfo)
+        {
+            ContactInfo = contactInfo ?? throw new ArgumentNullException(nameof(contactInfo));
+            UpdateModificationInfo();
+        }
+
+        public void UpdateCredentials(Credentials credentials)
+        {
+            Credentials = credentials ?? throw new ArgumentNullException(nameof(credentials));
+            UpdateModificationInfo();
+        }
+
+        public void Activate() => IsActive = true;
+
+        public void Deactivate() => IsActive = false;
+
+        public void SetProfilePhoto(string? profilePhoto)
+        {
+            ProfilePhoto = profilePhoto;
+            UpdateModificationInfo();
+        }
+
+        public void SetRefreshToken(string? refreshToken)
+        {
+            RefreshToken = refreshToken;
+            UpdateModificationInfo();
+        }
+
+        // Add/remove roles managing encapsulation of the collection
+
+        public void AddUserOrgRole(UserOrgRole role)
+        {
+            if (role == null) throw new ArgumentNullException(nameof(role));
+            if (!_userOrgRoles.Contains(role))
+            {
+                _userOrgRoles.Add(role);
+                UpdateModificationInfo();
+            }
+        }
+
+        public void RemoveUserOrgRole(UserOrgRole role)
+        {
+            if (role == null) throw new ArgumentNullException(nameof(role));
+            if (_userOrgRoles.Remove(role))
+            {
+                UpdateModificationInfo();
+            }
+        }
+
+        // Password verification encapsulated in User entity
+
         public bool VerifyPassword(string password, IPasswordHasher hasher)
         {
-            return hasher.VerifyHashedPassword(Password, password);
+            if (hasher == null) throw new ArgumentNullException(nameof(hasher));
+            if (password == null) throw new ArgumentNullException(nameof(password));
+            return hasher.VerifyHashedPassword(Credentials.Password, password);
+        }
+
+        // Private helper to update modification info - domain internal consistency
+
+        private void UpdateModificationInfo()
+        {
+            // Assuming ModifiedInfo is a value object where you set updated details,
+            // e.g. updated timestamps, user identifiers for changes, etc.
+            ModifiedInfo = new ModifiedInfo(
+                fcb: ModifiedInfo.Fcb,
+                lub: ModifiedInfo.Lub /* current user or system identifier who updated */,
+                fcd: ModifiedInfo.Fcd,
+                lud: DateTime.UtcNow
+            );
         }
     }
 }

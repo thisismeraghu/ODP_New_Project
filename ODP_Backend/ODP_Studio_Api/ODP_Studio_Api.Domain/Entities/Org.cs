@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ODP_Studio_Api.Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Metrics;
@@ -19,16 +20,13 @@ namespace ODP_Studio_Api.Domain.Entities
         public string OrgLogo { get; set; }
         public bool IsUnderGovt { get; set; }
         public DateTime StartedDate { get; set; }
-        public string Email { get; set; }
-        public string PhoneNum { get; set; }
+        public ContactInformation ContactInfo { get; private set; } = null!;
+        public ModifiedInfo ModifiedInfo { get; private set; }
         public bool IsRegistered { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
         public string url { get; set; }
         public bool IsActive { get; private set; }
-        public string? fcb { get; private set; }
-        public string? lub { get; private set; }
-        public DateTime? fcd { get; private set; }
-        public DateTime? lud { get; private set; }
+       
     }
 }

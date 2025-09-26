@@ -10,3 +10,4 @@ D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.pdb
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ref\ODP_Studio_Api.Domain.dll
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.sourcelink.json
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api.Domain\obj\Debug\net8.0\ODP_Studio_Api.Domain.csproj.AssemblyReference.cache

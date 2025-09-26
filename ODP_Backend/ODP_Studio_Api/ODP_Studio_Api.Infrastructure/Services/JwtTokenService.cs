@@ -26,7 +26,7 @@ namespace ODP_Studio_Api.Infrastructure.Services
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserID.ToString()),
-                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.Credentials.UserName)
                 //new Claim(ClaimTypes.Role, user.Role)
             };
 

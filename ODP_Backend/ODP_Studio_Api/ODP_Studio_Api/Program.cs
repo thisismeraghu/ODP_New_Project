@@ -1,12 +1,16 @@
+using FluentValidation;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using ODP_Studio_Api.Api.Middlewares;
+using ODP_Studio_Api.Application.CommandHandlers;
+using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.Mapping;
+using ODP_Studio_Api.Application.Validators;
 using ODP_Studio_Api.Domain.Interfaces;
 using ODP_Studio_Api.Infrastructure.Persistence.Context;
 using ODP_Studio_Api.Infrastructure.Persistence.Repository;
-using Microsoft.EntityFrameworkCore;
-using ODP_Studio_Api.Application.CommandHandlers;
 using ODP_Studio_Api.Infrastructure.Services;
-using ODP_Studio_Api.Application.Mapping;
-using Microsoft.Extensions.DependencyInjection;
-using ODP_Studio_Api.Api.Middlewares;
+using ODP_Studio_Api.Validators;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +37,10 @@ builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddScoped<IValidator<LoginRequestDto>, LoginDTOValidator>();
+builder.Services.AddScoped<IValidator<LoginResponseDto>, LoginResponseDtoValidator>();
+
+//builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddDbContext<AppDbContext>(options =>

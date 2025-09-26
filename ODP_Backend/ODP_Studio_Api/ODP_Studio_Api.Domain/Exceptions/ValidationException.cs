@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentValidation.Results;
 
 namespace ODP_Studio_Api.Domain.Exceptions
 {
@@ -14,5 +11,14 @@ namespace ODP_Studio_Api.Domain.Exceptions
         {
             Errors = errors ?? Array.Empty<string>();
         }
+        public ValidationException(ValidationResult validationResult)
+        {
+            var errorMessages = validationResult.Errors
+                         .Select(error => error.ErrorMessage);
+
+            // Create your custom exception with a message and error messages array
+             new ValidationException("Validation failed", errorMessages);
+        }
+
     }
 }

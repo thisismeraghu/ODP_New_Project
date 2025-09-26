@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ODP_Studio_Api.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3eb9f48eed37d695b092e448a68094b9544b3b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1317436912f66bade682bd6c809761733e955cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ODP_Studio_Api.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ODP_Studio_Api.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

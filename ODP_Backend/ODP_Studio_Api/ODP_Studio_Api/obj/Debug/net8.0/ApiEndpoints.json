@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ODP_Studio_Api.Application.DTOs.UserLoginInfoDto",
+        "Type": "ODP_Studio_Api.Application.DTOs.LoginResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

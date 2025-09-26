@@ -140,3 +140,5 @@ D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\net8.0\FluentValidation.dll
+D:\Projects\ODP_New_Project\ODP_Backend\ODP_Studio_Api\ODP_Studio_Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
