@@ -9,7 +9,7 @@ using System.Security.Authentication;
 
 namespace ODP_Studio_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] 
     [ApiController]
     public class LoginController : ControllerBase
     {
