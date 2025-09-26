@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,20 +15,25 @@ namespace ODP_Studio_Api.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
+        private readonly IValidator<LoginRequestDto> _loginValidator;
 
-        public LoginController(IMediator mediator, IMapper mapper)
+        public LoginController(IMediator mediator, IMapper mapper, IValidator<LoginRequestDto> loginValidator)
         {
             _mediator = mediator;
             _mapper = mapper;
+            _loginValidator = loginValidator;
         }
 
         [HttpPost]
-        public async Task<ActionResult<UserLoginInfoDto>> Login([FromBody] LoginRequestDto request)
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto request, [FromServices] IValidator<LoginRequestDto> validator)
         {
+            var validationResult = await _loginValidator.ValidateAsync(request);
+            if (!validationResult.IsValid)
+                return BadRequest(validationResult.Errors);
+
             var command = _mapper.Map<LoginUserCommand>(request);
             var response = await _mediator.Send(command);
-            var result = _mapper.Map<UserLoginInfoDto>(response);
-            return Ok(result);
+            return Ok(_mapper.Map<LoginResponseDto>(response));
         }
     }
 }
