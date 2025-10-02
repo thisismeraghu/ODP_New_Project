@@ -1,36 +1,44 @@
 // src/pages/LandingPage.tsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { logout } from "../features/auth/authSlice";
-
-const LandingPage: React.FC = () => {
+import { GetFormatedUserInfo } from "../utils/userFormatter";
+import { selectLoginDisplayModel } from "../features/auth/authSelector";
+  const LandingPage: React.FC = () => {
   const [notifications, setNotifications] = useState(5);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 // Select user from auth slice
-  const user = useAppSelector(state => state.auth.user);
+  // const user = useAppSelector(state => state.auth.user);
+  const loginDisplay = useAppSelector(selectLoginDisplayModel);
   
-  if (!user) {
-    return navigate("/");; // or redirect
-  }
+  useEffect(() => {
+    if (!loginDisplay) {
+      navigate("/"); // Navigate after render
+    }
+  }, [loginDisplay, navigate]);
+
   const handleOnLogout = () => {
     dispatch(logout());
-    navigate('/'); // Redirect to login after logout
-   // alert("Logged out successfully!");
+    navigate('/'); 
   };
-
+  if (!loginDisplay) {
+    return <Navigate to="/" replace />;
+  }
   return (
     <>
       <Header
-        title={user ? user.username:" User"}
-        backgroundColor="#410069ff"
-        titleColor="#b74040ff"
+        companyName= {loginDisplay ? loginDisplay.orgName : ""}
+        roleType= {loginDisplay ? loginDisplay.roleType : ""}
+        userName= {loginDisplay ? loginDisplay.firstName : ""}
+        title="Orphan Development Product"
+        backgroundColor="#4109ff"
         showSearch
         onSearchChange={(val) => setSearchTerm(val)}
         showNotifications

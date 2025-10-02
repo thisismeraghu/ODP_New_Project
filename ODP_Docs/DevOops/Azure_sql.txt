@@ -1,0 +1,57 @@
+
+
+{
+    "sku": {
+        "name": "GP_S_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 2
+    },
+    "kind": "v12.0,user,vcore,serverless,freelimit",
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 34359738368,
+        "status": "Online",
+        "databaseId": "b4437b92-2764-4529-8492-b93fffd8acec",
+        "creationDate": "2025-10-01T16:14:30.563Z",
+        "currentServiceObjectiveName": "GP_S_Gen5_2",
+        "requestedServiceObjectiveName": "GP_S_Gen5_2",
+        "defaultSecondaryLocation": "eastasia",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": false,
+        "maxLogSizeBytes": 193273528320,
+        "readScale": "Disabled",
+        "currentSku": {
+            "name": "GP_S_Gen5",
+            "tier": "GeneralPurpose",
+            "family": "Gen5",
+            "capacity": 2
+        },
+        "autoPauseDelay": 60,
+        "currentBackupStorageRedundancy": "Local",
+        "requestedBackupStorageRedundancy": "Local",
+        "minCapacity": 0.5,
+        "maintenanceConfigurationId": "/subscriptions/b4b19dc2-2e30-4ba3-9c02-03b364867f72/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false,
+        "useFreeLimit": true,
+        "freeLimitExhaustionBehavior": "AutoPause",
+        "availabilityZone": "NoPreference"
+    },
+    "location": "southeastasia",
+    "tags": {},
+    "id": "/subscriptions/b4b19dc2-2e30-4ba3-9c02-03b364867f72/resourceGroups/odp-dev/providers/Microsoft.Sql/servers/odp-dev/databases/ODP",
+    "name": "ODP",
+    "type": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2022-11-01-preview"
+}
+
+
+
+---------connection string ------------
+Server=tcp:odp-dev.database.windows.net,1433;Initial Catalog=ODP;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication="Active Directory Default";
+Server=tcp:odp-dev.database.windows.net,1433;Initial Catalog=ODP;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+ "Server=tcp": "odp-dev.database.windows.net",
+ "1433;Initial" "Catalog=ODP;User",
+ "ID=youradmin;Password=yourpassword;Encrypt=True;TrustServerCertificate=False;Connection" "Timeout=30;"

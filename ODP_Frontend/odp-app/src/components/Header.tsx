@@ -19,23 +19,20 @@ interface HeaderButton {
 }
 
 interface HeaderProps {
-  title: string;
-  titleColor?: string;
+  title?: string;
+  companyName: string;
+  userName: string;
+  roleType: string;
   backgroundColor?: string;
   buttons?: HeaderButton[];
-
-  // Search
   showSearch?: boolean;
   searchPlaceholder?: string;
   onSearchChange?: (value: string) => void;
-
-  // Notifications
   showNotifications?: boolean;
   notificationCount?: number;
   onNotificationClick?: () => void;
 }
 
-// Styled components for Search box
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -74,10 +71,42 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+// Container for the left side user info
+const UserInfoContainer = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  gap: theme.spacing(1),
+  flexGrow: 1,
+}));
+
+// Different styled spans for company, username and role
+const CompanyText = styled(Typography)(({ theme }) => ({
+  color: '#64B5F6', // Light Blue
+  fontWeight: '700',
+  fontSize: '1.25rem',
+  fontFamily: 'Montserrat, sans-serif',
+}));
+
+const UserNameText = styled(Typography)(({ theme }) => ({
+  color: '#81C784', // Light Green
+  fontWeight: '600',
+  fontSize: '1rem',
+  fontStyle: 'italic',
+  fontFamily: 'Roboto, sans-serif',
+}));
+
+const RoleText = styled(Typography)(({ theme }) => ({
+  color: '#FFB74D', // Light Orange
+  fontWeight: '500',
+  fontSize: '0.875rem',
+  fontFamily: 'Arial, sans-serif',
+}));
+
 const Header: React.FC<HeaderProps> = ({
-  title,
-  titleColor = '#fff',
-  backgroundColor = '#1976d2',
+  companyName,
+  userName,
+  roleType,
+  backgroundColor = '#0D47A1',
   buttons = [],
   showSearch = false,
   searchPlaceholder = 'Search…',
@@ -86,7 +115,6 @@ const Header: React.FC<HeaderProps> = ({
   notificationCount = 0,
   onNotificationClick,
 }) => {
-
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (onSearchChange) {
       onSearchChange(event.target.value);
@@ -96,9 +124,12 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <AppBar position="static" sx={{ backgroundColor }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: titleColor }}>
-          {title}
-        </Typography>
+        <UserInfoContainer>
+          <CompanyText component="span">{companyName}</CompanyText>
+          <Typography component="span" sx={{ color: '#FFFFFF' }}> - </Typography>
+          <UserNameText component="span">{userName}</UserNameText>
+          <RoleText component="span">({roleType})</RoleText>
+        </UserInfoContainer>
 
         {showSearch && (
           <Search>
