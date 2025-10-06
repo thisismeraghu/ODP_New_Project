@@ -10,14 +10,16 @@ import { Snackbar } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { loginAsync } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import { selectLoginDisplayModel } from "../features/auth/authSelector";
 
 const HomePage: React.FC = () => {
   const [loginOpen, setLoginOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { user, loading, error } = useAppSelector((state) => state.auth);
-
+  // const { user, loading, error } = useAppSelector((state) => state.auth);
+  const loginDisplay = useAppSelector(selectLoginDisplayModel);
+  
   // Define the handler to close login dialog
   const closeLoginDialogBox = () => {
     setLoginOpen(false);
@@ -28,10 +30,10 @@ const HomePage: React.FC = () => {
   };
 
     useEffect(() => {
-        if (user) {
+        if (loginDisplay) {
         navigate('/landing');
         }
-    }, [user, navigate]);
+    }, [loginDisplay, navigate]);
     
   const handleLoginSubmit = async (username: string, password: string) => {
     try{
@@ -50,9 +52,11 @@ const HomePage: React.FC = () => {
     <>
       <Box minHeight="100vh" display="flex" flexDirection="column">
         <Header
+          companyName="Rishivandhya"
+          roleType="Manager"
+          userName="Guest"
           title="Orphan Development Product"
           backgroundColor="#00695c"
-          titleColor="#fff"
           buttons={[
             {
               label: "Login",
@@ -111,9 +115,9 @@ const HomePage: React.FC = () => {
       />
         <Footer />
       </Box>
-      {loading && <p>Logging in...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {user && <p>Welcome, {user.username}!</p>}
+      {/* {loading && <p>Logging in...</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>} */}
+      {/* {user && <p>Welcome, {user.username}!</p>} */}
     </>
   );
 };

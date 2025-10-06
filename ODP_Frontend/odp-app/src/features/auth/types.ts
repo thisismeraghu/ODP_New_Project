@@ -3,13 +3,22 @@ export interface LoginPayload {
   password: string;
 }
 
-export interface User {
-  id: string;
-  name: string;
-  email: string;
+export interface LoginResponse {
+  userID: number,
+  firstName: string,
+  lastName: string,
+  roleType: string,
+  orgID: number,                                                                                                                    
+  orgName: string,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  token : string
 }
 
-export interface LoginResponse {
-  username: string;
-  token: string;
+export interface LoginResponseDTO {
+  userID: number,
+  firstName: string,
+  lastName: string,
+  roleType: string,
+  orgID: number,
+  orgName: string,
+  token : string
 }

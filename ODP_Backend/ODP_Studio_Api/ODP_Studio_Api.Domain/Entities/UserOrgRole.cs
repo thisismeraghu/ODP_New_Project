@@ -16,7 +16,6 @@ namespace ODP_Studio_Api.Domain.Entities
         public int UserID { get; set; }
         public int OrgID { get; set; }
         public int RoleTypeID { get; set; }
-
         public User User { get; set; }
         public Role RoleType { get; set; }
         public Org Org { get; set; }

@@ -3,11 +3,14 @@ import {
   createAsyncThunk,
   type PayloadAction,
 } from "@reduxjs/toolkit";
-import type { LoginPayload, LoginResponse } from "./types";
+import type { LoginResponseDTO } from "./types";
 import { loginUser } from "./authApi";
+import type { LoginRequestDTO } from "../../types/DTOs/loginRequestDTO";
+import type { AuthDomainModel } from "../../types/DomainModels/authDomainModel";
+import { mapLoginResponseDtoToAuthDomainModel } from "../../utils/mappers/ResponseDtoToDomainMapper";
 
 interface AuthState {
-  user: LoginResponse | null;
+  user: AuthDomainModel | null;
   loading: boolean;
   error: string | null;
 }
@@ -44,11 +47,15 @@ export const getPersistedAuthState = (): Partial<AuthState> => {
 };
 
 // Async thunk handles login API call lifecycle
-export const loginAsync = createAsyncThunk<LoginResponse, LoginPayload>(
+export const loginAsync = createAsyncThunk<AuthDomainModel, LoginRequestDTO>(
   "auth/login",
-  async (payload, { rejectWithValue }) => {
+  async (payload, { rejectWithValue }) => {              
     try {
-      return await loginUser(payload);
+      const response = await loginUser(payload);
+      if (!response) throw new Error("Login failed");
+      const dto: LoginResponseDTO = await response;
+      return mapLoginResponseDtoToAuthDomainModel(dto); // Map DTO to Domain Model
+
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || error.message);
     }
@@ -75,7 +82,7 @@ const authSlice = createSlice({
       })
       .addCase(
         loginAsync.fulfilled,
-        (state, action: PayloadAction<LoginResponse>) => {
+        (state, action: PayloadAction<AuthDomainModel>) => {
           state.user = action.payload;
           state.loading = false;
           state.error = null;
