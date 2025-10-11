@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ODP_Studio_Api.Domain.Interfaces
 {
-    public interface IUserRepository
+    public interface IOrphanRepository
     {
-        Task<UserProfileWithOrgsDto?> GetUserWithRolesAndOrgAsync(string username);
+        Task AddAsync(Orphan orphan, CancellationToken cancellationToken = default);
     }
 }

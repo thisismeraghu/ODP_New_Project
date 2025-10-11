@@ -2,6 +2,7 @@
 using ODP_Studio_Api.Application.DTOs;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.Interfaces;
+using ODP_Studio_Api.Domain.ModelDTOs;
 using ODP_Studio_Api.Infrastructure.Persistence.Context;
 using System;
 using System.Collections.Generic;
@@ -20,18 +21,40 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Repository
             _context = context;
         }
 
-      
-        public async Task<User?> GetUserWithRolesAndOrgAsync(string username)
-        {
-            var user = await _context.Users
-                .Include(u => u.UserOrgRoles)
-                    .ThenInclude(uor => uor.RoleType)
-                .Include(u => u.UserOrgRoles)
-                    .ThenInclude(uor => uor.Org)
-                .FirstOrDefaultAsync(u => u.Credentials.UserName == username);
 
-            // Optionally, you can map or transform here if needed
-            return user;
+        public async Task<UserProfileWithOrgsDto?> GetUserWithRolesAndOrgAsync(string username)
+        {
+            var userProfile = await _context.UserProfiles
+                .Include(up => up.UserAccount)
+                .Include(up => up.Role)
+                .Where(up => up.UserAccount.Username == username && up.IsActive)
+                .FirstOrDefaultAsync();
+
+            if (userProfile == null)
+                return null;
+
+            var dto = new UserProfileWithOrgsDto
+            {
+                UserProfile = userProfile
+            };
+
+            if (userProfile.UserType == "Orphan")
+            {
+                dto.OrphanOrgs = await _context.OrphanOrgs
+                    .Where(oo => oo.OrphanId == userProfile.EntityId && oo.IsActive)
+                    .Include(oo => oo.Org)
+                    .Include(oo => oo.Orphan)
+                    .ToListAsync();
+            }
+            else if (userProfile.UserType == "Manager")
+            {
+                dto.ManagerOrgs = await _context.ManagerOrgs
+                    .Where(mo => mo.ManagerId == userProfile.EntityId && mo.IsActive)
+                    .Include(mo => mo.Org)
+                    .ToListAsync();
+            }
+
+            return dto;
         }
 
     }

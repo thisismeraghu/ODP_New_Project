@@ -1,4 +1,4 @@
-﻿using ODP_Studio_Api.Domain.Entities;
+﻿using ODP_Studio_Api.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ODP_Studio_Api.Domain.Interfaces
 {
-    public interface ITokenService
+    public interface IHasModifiedInfo
     {
-        string GenerateToken(UserProfile userProfile);
+        ModifiedInfo ModifiedInfo { get; }
     }
 }

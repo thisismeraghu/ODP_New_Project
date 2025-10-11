@@ -33,7 +33,7 @@ namespace ODP_Studio_Api.Application.CommandHandlers
             var user = await _userRepository.GetUserWithRolesAndOrgAsync(request.Username);
             if (user == null || !user.VerifyPassword(request.Password, _passwordHasher))
                 throw new AuthenticationException("Invalid username or password");
-            var token = _tokenService.GenerateToken(user);
+            var token = _tokenService.GenerateToken(user.UserProfile);
             var responseDto = _mapper.Map<LoginResponseDto>(user);
             responseDto.Token = token;
             var validationResult = await _responseValidator.ValidateAsync(responseDto, cancellationToken);
@@ -44,7 +44,6 @@ namespace ODP_Studio_Api.Application.CommandHandlers
 
                 // Throw your custom ValidationException with error messages
                 throw new Domain.Exceptions.ValidationException("Validation failed", errorMessages);
-
             }
 
             return responseDto;

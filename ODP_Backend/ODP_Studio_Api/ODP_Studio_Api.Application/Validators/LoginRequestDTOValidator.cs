@@ -13,7 +13,7 @@ namespace ODP_Studio_Api.Application.Validators
         public LoginResponseDtoValidator()
         {
             RuleFor(x => x.UserID)
-                .GreaterThan(0).WithMessage("UserID must be greater than zero.");
+                .NotEmpty().WithMessage("UserID must be greater than zero.");
 
             RuleFor(x => x.FirstName)
                 .NotEmpty().WithMessage("FirstName is required.");
@@ -25,7 +25,7 @@ namespace ODP_Studio_Api.Application.Validators
                 .NotEmpty().WithMessage("RoleType is required.");
 
             RuleFor(x => x.OrgID)
-                .GreaterThan(0).WithMessage("OrgID must be greater than zero.");
+                .NotEmpty().WithMessage("OrgID must be greater than zero.");
 
             RuleFor(x => x.OrgName)
                 .NotEmpty().WithMessage("OrgName is required.");

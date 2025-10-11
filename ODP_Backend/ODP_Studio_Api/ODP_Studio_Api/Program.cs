@@ -48,6 +48,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Infrastructure services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IOrphanRepository, OrphanRepository>();
+
 builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>();
 builder.Services.AddScoped<ITokenService, JwtTokenService>();
 
