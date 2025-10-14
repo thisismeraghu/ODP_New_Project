@@ -21,12 +21,12 @@ namespace ODP_Studio_Api.Infrastructure.Services
             _configuration = configuration;
         }
 
-        public string GenerateToken(User user)
+        public string GenerateToken(UserProfile user)
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserID.ToString()),
-                new Claim(JwtRegisteredClaimNames.UniqueName, user.Credentials.UserName)
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserAccount.UserAccountId.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserAccount.Username)
                 //new Claim(ClaimTypes.Role, user.Role)
             };
 
