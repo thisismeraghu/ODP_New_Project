@@ -11,7 +11,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Role : IHasModifiedInfo
     {
         public Guid RoleId { get; set; }
-        public int RoleKey { get; set; }
         public string RoleName { get; set; }
         public string Description { get; set; }
         public bool IsActive { get; set; }

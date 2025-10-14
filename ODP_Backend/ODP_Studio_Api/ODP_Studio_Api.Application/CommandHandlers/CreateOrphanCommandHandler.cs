@@ -27,8 +27,20 @@ namespace ODP_Studio_Api.Application.CommandHandlers
         {
             var orphan = _mapper.Map<Orphan>(request.Orphan);
             orphan.OrphanId = orphan.OrphanId == Guid.Empty ? Guid.NewGuid() : orphan.OrphanId;
-            orphan.ModifiedInfo = orphan.ModifiedInfo ?? new ModifiedInfo(orphan.OrphanId, Guid.Empty, DateTime.Now, new DateTime());
 
+            orphan.OrphanOrgs = new List<OrphanOrg>
+            {
+                new OrphanOrg
+                {
+                    OrphanOrgId = Guid.NewGuid(),
+                    OrphanId = orphan.OrphanId,
+                    OrgId = request.Orphan.OrgId,
+                    IsActive = true,
+                    AssociationStartDate = DateTime.UtcNow,
+                    ModifiedInfo = orphan.ModifiedInfo
+                }
+            };
+            orphan.ModifiedInfo = orphan.ModifiedInfo ?? new ModifiedInfo(orphan.OrphanId, Guid.Empty, DateTime.Now, new DateTime());
             await _orphanRepository.AddAsync(orphan, cancellationToken);
             return orphan.OrphanId;
         }

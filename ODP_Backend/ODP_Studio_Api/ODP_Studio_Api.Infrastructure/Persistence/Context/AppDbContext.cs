@@ -55,7 +55,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureCompany(EntityTypeBuilder<Company> builder)
         {
             builder.HasKey(c => c.CompanyId);
-            builder.HasIndex(c => c.CompanyKey).IsUnique().IsClustered();
 
             builder.Property(c => c.CompanyName).IsRequired().HasMaxLength(200);
             builder.Property(c => c.Industry).HasMaxLength(100);
@@ -76,7 +75,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureManager(EntityTypeBuilder<Manager> builder)
         {
             builder.HasKey(m => m.ManagerId);
-            builder.HasIndex(m => m.ManagerKey).IsUnique().IsClustered();
 
             builder.OwnsOne(m => m.PersonalInfo, pi =>
             {
@@ -103,7 +101,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureManagerOrg(EntityTypeBuilder<ManagerOrg> builder)
         {
             builder.HasKey(mo => mo.ManagerOrgId);
-            builder.HasIndex(mo => mo.ManagerOrgKey).IsUnique().IsClustered();
 
             builder.Property(mo => mo.AssociationStartDate).IsRequired();
             builder.Property(mo => mo.AssociationEndDate);
@@ -122,7 +119,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureOrg(EntityTypeBuilder<Org> builder)
         {
             builder.HasKey(o => o.OrgId);
-            builder.HasIndex(o => o.OrgKey).IsUnique().IsClustered();
 
             builder.Property(o => o.OrgName).IsRequired().HasMaxLength(200);
             builder.Property(o => o.PhoneNumber).HasMaxLength(20);
@@ -151,7 +147,7 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureOrphan(EntityTypeBuilder<Orphan> builder)
         {
             builder.HasKey(o => o.OrphanId);
-            builder.HasIndex(o => o.OrphanKey).IsUnique().IsClustered();
+           // builder.HasIndex(o => o.OrphanKey);
 
             builder.OwnsOne(o => o.PersonalInfo, pi =>
             {
@@ -174,7 +170,7 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureOrphanOrg(EntityTypeBuilder<OrphanOrg> builder)
         {
             builder.HasKey(oo => oo.OrphanOrgId);
-            builder.HasIndex(oo => oo.OrphanOrgKey).IsUnique().IsClustered();
+           // builder.HasIndex(oo => oo.OrphanOrgKey).IsUnique().IsClustered();
 
             builder.Property(oo => oo.AssociationStartDate).IsRequired();
             builder.Property(oo => oo.AssociationEndDate);
@@ -193,7 +189,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigurePermission(EntityTypeBuilder<Permission> builder)
         {
             builder.HasKey(p => p.PermissionId);
-            builder.HasIndex(p => p.PermissionKey).IsUnique().IsClustered();
 
             builder.Property(p => p.PermissionName).IsRequired().HasMaxLength(100);
             builder.Property(p => p.Description).HasMaxLength(255);
@@ -204,7 +199,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigurePerson(EntityTypeBuilder<Person> builder)
         {
             builder.HasKey(p => p.PersonId);
-            builder.HasIndex(p => p.PersonKey).IsUnique().IsClustered();
 
             builder.OwnsOne(p => p.PersonalInfo, pi =>
             {
@@ -227,7 +221,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureRole(EntityTypeBuilder<Role> builder)
         {
             builder.HasKey(r => r.RoleId);
-            builder.HasIndex(r => r.RoleKey).IsUnique().IsClustered();
 
             builder.Property(r => r.RoleName).IsRequired().HasMaxLength(50);
             builder.Property(r => r.Description).HasMaxLength(255);
@@ -238,7 +231,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureUserAccount(EntityTypeBuilder<UserAccount> builder)
         {
             builder.HasKey(u => u.UserAccountId);
-            builder.HasIndex(u => u.UserAccountKey).IsUnique().IsClustered();
 
             builder.Property(u => u.Username).IsRequired().HasMaxLength(100);
 
@@ -267,7 +259,6 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
         private void ConfigureUserProfile(EntityTypeBuilder<UserProfile> builder)
         {
             builder.HasKey(up => up.UserProfileId);
-            builder.HasIndex(up => up.UserProfileKey).IsUnique().IsClustered();
 
             builder.Property(up => up.UserType).IsRequired().HasMaxLength(50);
             builder.Property(up => up.EntityId).IsRequired();
@@ -293,16 +284,11 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
 
             ConfigureCommonFields(builder);
         }
-
         private void ConfigureRolePermission(EntityTypeBuilder<RolePermission> builder)
         {
             builder.ToTable("RolePermission", "UserRole");
 
             builder.HasKey(rp => rp.RolePermissionId);
-
-            builder.HasIndex(rp => rp.RolePermissionKey)
-                   .IsUnique()
-                   .IsClustered();
 
             builder.Property(rp => rp.IsActive)
                    .IsRequired()
@@ -318,8 +304,35 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
                    .HasForeignKey(rp => rp.PermissionId)
                    .OnDelete(DeleteBehavior.Cascade);
 
+            // Add a unique constraint to RoleId + PermissionId
+            builder.HasIndex(rp => new { rp.RoleId, rp.PermissionId }).IsUnique();
+
             ConfigureCommonFields(builder);
         }
+
+        //private void ConfigureRolePermission(EntityTypeBuilder<RolePermission> builder)
+        //{
+        //    builder.ToTable("RolePermission", "UserRole");
+
+        //    builder.HasIndex(rp => new { rp.RoleId, rp.PermissionId }).IsUnique();
+
+
+        //    builder.Property(rp => rp.IsActive)
+        //           .IsRequired()
+        //           .HasDefaultValue(true);
+
+        //    builder.HasOne(rp => rp.Role)
+        //           .WithMany()
+        //           .HasForeignKey(rp => rp.RoleId)
+        //           .OnDelete(DeleteBehavior.Cascade);
+
+        //    builder.HasOne(rp => rp.Permission)
+        //           .WithMany()
+        //           .HasForeignKey(rp => rp.PermissionId)
+        //           .OnDelete(DeleteBehavior.Cascade);
+
+        //    ConfigureCommonFields(builder);
+        //}
 
         private void ConfigureCommonFields<T>(EntityTypeBuilder<T> builder) where T : class, IHasModifiedInfo
         {

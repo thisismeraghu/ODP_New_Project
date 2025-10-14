@@ -39,6 +39,7 @@ builder.Host.UseSerilog();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IValidator<LoginRequestDto>, LoginDTOValidator>();
 builder.Services.AddScoped<IValidator<LoginResponseDto>, LoginResponseDtoValidator>();
+builder.Services.AddScoped<IValidator<CreateOrphanRequestDto>, CreateOrphanDtoValidator>();
 
 //builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
@@ -58,9 +59,9 @@ builder.Services.AddAutoMapper(cfg=> { },typeof(MappingProfile).Assembly);
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssemblyContaining<LoginUserCommandHandler>();
+    cfg.RegisterServicesFromAssemblyContaining<CreateOrphanCommandHandler>();
 });
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

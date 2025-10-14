@@ -11,7 +11,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Permission : IHasModifiedInfo
     {
         public Guid PermissionId { get; set; }
-        public int PermissionKey { get; set; }
         public string PermissionName { get; set; }
         public string Description { get; set; }
         public bool IsActive { get; set; }

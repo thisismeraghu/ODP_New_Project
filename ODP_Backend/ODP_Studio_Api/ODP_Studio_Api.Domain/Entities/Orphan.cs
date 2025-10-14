@@ -11,7 +11,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Orphan : IHasModifiedInfo
     {
         public Guid OrphanId { get; set; }
-        public int OrphanKey { get; set; }
         public PersonalInformation PersonalInfo { get;  set; } = null!;
         public DateTime AdmissionDate { get; set; }
         public string CurrentStatus { get; set; }

@@ -11,7 +11,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Person : IHasModifiedInfo
     {
         public Guid PersonId { get; set; }
-        public int PersonKey { get; set; }
         public PersonalInformation PersonalInfo { get; private set; } = null!;
         public string PhoneNumber { get; set; }
         public Address Address { get; set; }

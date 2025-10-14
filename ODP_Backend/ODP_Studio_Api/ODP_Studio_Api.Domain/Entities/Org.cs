@@ -14,7 +14,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Org : IHasModifiedInfo
     {
         public Guid OrgId { get; set; }
-        public int OrgKey { get; set; }
         public string OrgName { get; set; }
         public Address Address { get; set; }
         public Email ContactEmail { get; set; }

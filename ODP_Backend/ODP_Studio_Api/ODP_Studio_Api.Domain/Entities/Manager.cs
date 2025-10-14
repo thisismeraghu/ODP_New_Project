@@ -11,7 +11,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Manager : IHasModifiedInfo
     {
         public Guid ManagerId { get; set; }
-        public int ManagerKey { get; set; }
         public PersonalInformation PersonalInfo { get; private set; } = null!;
         public Guid CompanyId { get; set; }
         public string Designation { get; set; }

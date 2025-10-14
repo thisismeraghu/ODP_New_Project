@@ -13,7 +13,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class UserProfile : IHasModifiedInfo
     {
         public Guid UserProfileId { get; set; }
-        public int UserProfileKey { get; set; }
         public Guid UserAccountId { get; set; } // FK
         public string UserType { get; set; } // "Orphan", "Manager", "Person"
         public Guid EntityId { get; set; }

@@ -11,7 +11,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class Company : IHasModifiedInfo
     {
         public Guid CompanyId { get; set; }
-        public int CompanyKey { get; set; }
         public string CompanyName { get; set; }
         public string Industry { get; set; }
         public Email ContactEmail { get; set; }

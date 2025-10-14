@@ -3,6 +3,7 @@ using ODP_Studio_Api.Application.Commands;
 using ODP_Studio_Api.Application.DTOs;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.ModelDTOs;
+using ODP_Studio_Api.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,17 @@ namespace ODP_Studio_Api.Application.Mapping
 
             // Example Mapping for LoginRequestDto => LoginUserCommand
             CreateMap<LoginRequestDto, LoginUserCommand>();
+
+            CreateMap<Orphan, CreateOrphanRequestDto>();
+
+            CreateMap<PersonalInformationDto, PersonalInformation>();
+
+            CreateMap<CreateOrphanRequestDto, Orphan>();
+               
+                
+
+
+
         }
     }
 

@@ -10,14 +10,13 @@ namespace ODP_Studio_Api.Application.DTOs
 {
     public class CreateOrphanRequestDto
     {
-        public Guid OrphanId { get; set; }
-        public int OrphanKey { get; set; }
-        public PersonalInformation PersonalInfo { get; set; } = null!;
+        public Guid OrgId { get; set; } // OrphanOrg Model
+        public PersonalInformationDto PersonalInfo { get; set; } = null;
         public DateTime AdmissionDate { get; set; }
         public string CurrentStatus { get; set; }
         public bool IsActive { get; set; }
-        public ModifiedInfo ModifiedInfo { get; private set; }
-
-       // public ICollection<OrphanOrg> OrphanOrgs { get; set; }
+        public DateTime AssociationStartDate { get; set; } // OrphanOrg Model
+        public DateTime? AssociationEndDate { get; set; } // OrphanOrg Model
+        public ModifiedInfo ModifiedInfo { get; set; }
     }
 }

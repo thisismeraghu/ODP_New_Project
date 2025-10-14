@@ -13,7 +13,6 @@ namespace ODP_Studio_Api.Domain.Entities
     public class UserAccount : IHasModifiedInfo
     {
         public Guid UserAccountId { get; set; }
-        public int UserAccountKey { get; set; }
         public string Username { get; set; }
         public Email Email { get; set; }
         public UserCredentials Credentials { get; set; }
