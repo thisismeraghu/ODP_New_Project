@@ -4,7 +4,8 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ODP_Studio_Api.Application.Commands;
-using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.DTOs.RequestDTOs;
+using ODP_Studio_Api.Application.DTOs.ResponseDTOs;
 using System.Security.Authentication;
 
 namespace ODP_Studio_Api.Controllers

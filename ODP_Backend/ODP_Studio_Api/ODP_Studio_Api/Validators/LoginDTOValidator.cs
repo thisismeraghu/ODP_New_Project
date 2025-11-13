@@ -1,6 +1,6 @@
 ﻿// Api/Validators/LoginDTOValidator.cs
 using FluentValidation;
-using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.DTOs.RequestDTOs;
 
 
 namespace ODP_Studio_Api.Validators

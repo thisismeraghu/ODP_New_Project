@@ -1,0 +1,28 @@
+
+
+
+Summary Table
+Type	        Convention  Example	            Description
+-------------------------------------------------------------
+Create Request	Create[Entity]RequestDto	For create endpoints
+Update Request	Update[Entity]RequestDto	For update endpoints
+Read Request	Get[Entity]ByIdRequestDto	For get-by-id endpoints
+Read Many Resp	[Entity]ListResponseDto  	For list of results
+Single Resp	    [Entity]ResponseDto	        For single object responses
+Delete Req	    Delete[Entity]RequestDto	For delete body or filters
+
+
+
+Naming Conventions for Domain Layer DTOs Aggregating Data
+----------------------------------------------------------------
+DTO Type	                    Naming Convention Example	                 Purpose/Description
+Aggregated Data 
+Transfer Object	                [PrimaryEntity]With[RelatedEntity]Dto        e.g., OrphanWithOrgInfoDto	Represents combined data from Orphan and Org entities for transfer
+
+Summary or Light Data DTO	    [PrimaryEntity]SummaryDto                    e.g., OrphanSummaryDto	Lightweight data subset, typically for listing or brief info
+
+Detailed Data DTO	            [PrimaryEntity]DetailDto or [PrimaryEntity]FullDto   e.g., OrphanDetailDto	Full or detailed data view of an aggregate or entity
+
+Filter or Query  DTO	        [Entity]FilterDto or [Entity]QueryDto         e.g., OrphanFilterDto, OrphanQueryDto	Input parameters for searching or querying data
+
+Command DTO (for domain commands)	[Action][Entity]CommandDto                 e.g., CreateOrphanCommandDto	Data for commands/actions targeting domain operations

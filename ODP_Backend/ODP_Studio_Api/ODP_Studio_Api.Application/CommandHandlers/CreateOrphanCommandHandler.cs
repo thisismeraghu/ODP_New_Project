@@ -3,6 +3,7 @@ using MediatR;
 using ODP_Studio_Api.Application.Commands;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.Interfaces;
+using ODP_Studio_Api.Domain.ModelDTOs;
 using ODP_Studio_Api.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ODP_Studio_Api.Application.CommandHandlers
 {
-    public class CreateOrphanCommandHandler : IRequestHandler<CreateOrphanCommand, Guid>
+    public class CreateOrphanCommandHandler : IRequestHandler<CreateOrphanCommand, OrphanSummaryDto>
     {
         private readonly IOrphanRepository _orphanRepository;
         private readonly IMapper _mapper;
@@ -23,7 +24,7 @@ namespace ODP_Studio_Api.Application.CommandHandlers
             _mapper = mapper;
         }
 
-        public async Task<Guid> Handle(CreateOrphanCommand request, CancellationToken cancellationToken)
+        public async Task<OrphanSummaryDto> Handle(CreateOrphanCommand request, CancellationToken cancellationToken)
         {
             var orphan = _mapper.Map<Orphan>(request.Orphan);
             orphan.OrphanId = orphan.OrphanId == Guid.Empty ? Guid.NewGuid() : orphan.OrphanId;
@@ -41,8 +42,8 @@ namespace ODP_Studio_Api.Application.CommandHandlers
                 }
             };
             orphan.ModifiedInfo = orphan.ModifiedInfo ?? new ModifiedInfo(orphan.OrphanId, Guid.Empty, DateTime.Now, new DateTime());
-            await _orphanRepository.AddAsync(orphan, cancellationToken);
-            return orphan.OrphanId;
+            var dto = await _orphanRepository.AddAsync(orphan, cancellationToken);
+            return dto;
         }
     }
 }

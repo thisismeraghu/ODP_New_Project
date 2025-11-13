@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.DTOs.ResponseDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
