@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.Interfaces;
-using ODP_Studio_Api.Domain.ValueObjects;
 
 namespace ODP_Studio_Api.Infrastructure.Persistence.Context
 {

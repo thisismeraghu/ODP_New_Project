@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using ODP_Studio_Api.Application.Commands;
-using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.DTOs.CommonDTOs;
+using ODP_Studio_Api.Application.DTOs.RequestDTOs;
+using ODP_Studio_Api.Application.DTOs.ResponseDTOs;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.ModelDTOs;
 using ODP_Studio_Api.Domain.ValueObjects;
@@ -48,15 +50,31 @@ namespace ODP_Studio_Api.Application.Mapping
             // Example Mapping for LoginRequestDto => LoginUserCommand
             CreateMap<LoginRequestDto, LoginUserCommand>();
 
-            CreateMap<Orphan, CreateOrphanRequestDto>();
+            CreateMap<Orphan, CreateOrphanRequestDto>().ReverseMap();
 
-            CreateMap<PersonalInformationDto, PersonalInformation>();
+            CreateMap<PersonalInformationDto, PersonalInformation>().ReverseMap();
 
-            CreateMap<CreateOrphanRequestDto, Orphan>();
+            CreateMap<UpdateOrphanRequestDto, UpdateOrphanCommand>().ReverseMap();
+
+            CreateMap<Orphan, UpdateOrphanCommand>().ReverseMap();
+
+
+            // Map child entity and DTO
+            CreateMap<OrphanInfoWithOrgDto, OrphanDetailsDto>()
+                .ForMember(dest => dest.OrphansInfo, opt => opt.MapFrom(src => src.Orphan)).ReverseMap();
                
-                
+            CreateMap<Orphan, OrphanResponseDto>().ReverseMap();
+            CreateMap<CreateOrphanResponseDto, OrphanSummaryDto>().ReverseMap();
+
+            // Map wrapper DTOs
+            CreateMap<OrphanListResponseDto, OrphansListDto>()
+                .ForMember(dest => dest.orphans, opt => opt.MapFrom(src => src.OrphansList));
+
+            CreateMap<OrphansListDto, OrphanListResponseDto>()
+                .ForMember(dest => dest.OrphansList, opt => opt.MapFrom(src => src.orphans));
 
 
+            // CreateMap<Orphan, OrphanResponseDto>();
 
         }
     }

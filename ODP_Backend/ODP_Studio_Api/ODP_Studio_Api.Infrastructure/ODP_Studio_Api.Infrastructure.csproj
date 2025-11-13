@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ODP_Studio_Api.Application\ODP_Studio_Api.Application.csproj" />
     <ProjectReference Include="..\ODP_Studio_Api.Domain\ODP_Studio_Api.Domain.csproj" />
   </ItemGroup>
 

@@ -10,6 +10,9 @@ namespace ODP_Studio_Api.Domain.Interfaces
 {
     public interface IOrphanRepository
     {
-        Task AddAsync(Orphan orphan, CancellationToken cancellationToken = default);
+        Task<OrphanSummaryDto> AddAsync(Orphan orphan, CancellationToken cancellationToken = default);
+        Task<OrphanInfoWithOrgDto> GetByIdAsync(Guid orphanId, CancellationToken cancellationToken);
+        Task<OrphansListDto> GetAllByOrgIdAsync(Guid orgId, CancellationToken cancellationToken);
+        Task<OrphanUpdateSummary> UpdateByIdAsync(Orphan orphan, CancellationToken cancellationToken = default);
     }
 }

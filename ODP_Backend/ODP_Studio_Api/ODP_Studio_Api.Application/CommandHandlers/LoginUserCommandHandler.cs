@@ -2,7 +2,7 @@
 using FluentValidation;
 using MediatR;
 using ODP_Studio_Api.Application.Commands;
-using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.DTOs.ResponseDTOs;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.Exceptions;
 using ODP_Studio_Api.Domain.Interfaces;

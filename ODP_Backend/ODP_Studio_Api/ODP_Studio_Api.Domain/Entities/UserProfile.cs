@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace ODP_Studio_Api.Domain.Entities
 {
-   // [Table("UserProfile", Schema = "UserAuth")]
     public class UserProfile : IHasModifiedInfo
     {
         public Guid UserProfileId { get; set; }
@@ -21,15 +20,8 @@ namespace ODP_Studio_Api.Domain.Entities
         public ModifiedInfo ModifiedInfo { get; private set; }
         public virtual UserAccount UserAccount { get; set; }
         public virtual Role Role { get; set; }
-        //public ICollection<OrphanOrg>? OrphanOrgs { get; set; }
-        //public ICollection<ManagerOrg>? ManagerOrgs { get; set; }
 
-        public bool VerifyPassword(string password, IPasswordHasher hasher)
-        {
-            if (hasher == null) throw new ArgumentNullException(nameof(hasher));
-            if (password == null) throw new ArgumentNullException(nameof(password));
-            return hasher.VerifyHashedPassword(UserAccount.Credentials.PasswordHash, password);
-        }
+       
     }
 
 }

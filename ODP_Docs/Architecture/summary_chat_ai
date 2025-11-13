@@ -1,0 +1,21 @@
+
+
+
+User Chat Input
+      ↓
+Frontend UI → Sends prompt → Backend API (/chat-query)
+                           ↓
+                LLM generates SQL query
+                           ↓
+               Query validation (schema + roles)
+                           ↓
+                    Query execution (DB)
+                           ↓
+                Query result formatted JSON
+                           ↓     
+              API response → Frontend UI renders
+                           ↓ 
+               User sees dynamic results in chat
+
+setx OPENAI_API_KEY "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"
+api-key : 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

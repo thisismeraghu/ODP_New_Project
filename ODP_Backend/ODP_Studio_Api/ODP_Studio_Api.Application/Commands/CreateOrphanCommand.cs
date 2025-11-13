@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using ODP_Studio_Api.Application.DTOs;
+using ODP_Studio_Api.Application.DTOs.RequestDTOs;
 using ODP_Studio_Api.Domain.ModelDTOs;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ODP_Studio_Api.Application.Commands
 {
-    public class CreateOrphanCommand : IRequest<Guid>
+    public class CreateOrphanCommand : IRequest<OrphanSummaryDto>
     {
         public CreateOrphanRequestDto Orphan { get; set; }
         public CreateOrphanCommand(CreateOrphanRequestDto orphan) => Orphan = orphan;
