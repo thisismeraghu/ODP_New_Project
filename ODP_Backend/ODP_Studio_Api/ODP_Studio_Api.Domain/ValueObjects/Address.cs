@@ -8,9 +8,11 @@ namespace ODP_Studio_Api.Domain.ValueObjects
 {
     public class Address
     {
-        public string Value { get; private set; }
-        protected Address() { }
+        public string Value { get; set; }
+        public Address() { }
         public Address(string value) { Value = value; }
-        // Equality and other address properties as needed
+        //Equality and other address properties as needed
+
+        //public string address { get; set; }
     }
 }

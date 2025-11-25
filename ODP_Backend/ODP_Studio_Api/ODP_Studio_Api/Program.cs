@@ -46,6 +46,8 @@ builder.Services.AddScoped<IValidator<LoginRequestDto>, LoginDTOValidator>();
 builder.Services.AddScoped<IValidator<LoginResponseDto>, LoginResponseDtoValidator>();
 builder.Services.AddScoped<IValidator<CreateOrphanRequestDto>, CreateOrphanDtoValidator>();
 builder.Services.AddScoped<IValidator<UpdateOrphanRequestDto>, UpdateOrphanRequestDtoValidator>();
+builder.Services.AddScoped<IValidator<GetOrgByIdRequestDto>,GetOrgByIdRequestValidator>();
+builder.Services.AddScoped<IValidator<CreateOrgRequestDto>, CreateOrgRequestDtoValidators>();
 
 //builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
@@ -56,6 +58,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Infrastructure services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IOrphanRepository, OrphanRepository>();
+builder.Services.AddScoped<IOrgRepository, OrgRepository>();
 
 builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>();
 builder.Services.AddScoped<ITokenService, JwtTokenService>();
@@ -68,10 +71,13 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssemblyContaining<LoginUserCommandHandler>();
     cfg.RegisterServicesFromAssemblyContaining<CreateOrphanCommandHandler>();
     cfg.RegisterServicesFromAssemblyContaining<UpdateOrphanCommandHandler>();
+    cfg.RegisterServicesFromAssemblyContaining<UpdateOrgCommandHandler>();
 
     // Query register 
     cfg.RegisterServicesFromAssemblyContaining<GetOrphanByOrphanIdQueryHandler>();
     cfg.RegisterServicesFromAssemblyContaining<GetAllOrphansByOrgIdQuery>();
+    cfg.RegisterServicesFromAssemblyContaining<GetOrgByOrdIdQuery>();
+    cfg.RegisterServicesFromAssemblyContaining<GetAllOrphansByOrgIdQueryHandler>();
 });
 
 builder.Services.AddEndpointsApiExplorer();

@@ -33,7 +33,8 @@ namespace ODP_Studio_Api.Controllers
 
         [HttpPost]
         public async Task<IActionResult> CreateOrphan([FromBody] CreateOrphanRequestDto request, [FromServices] IValidator<CreateOrphanRequestDto> validator)
-        {
+        {   
+            
             var validationResult = await validator.ValidateAsync(request);
             if (!validationResult.IsValid)
                 return BadRequest(validationResult.Errors);

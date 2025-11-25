@@ -27,7 +27,7 @@ namespace ODP_Studio_Api.Api.Middlewares
             {
                 await HandleExceptionAsync(context, ex);
             }
-        }
+         }
 
         private async Task HandleExceptionAsync(HttpContext context, Exception exception)
         {

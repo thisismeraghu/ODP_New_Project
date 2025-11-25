@@ -15,8 +15,7 @@ namespace ODP_Studio_Api.Domain.Entities
     {
         public Guid OrgId { get; set; }
         public string OrgName { get; set; }
-        public Address Address { get; set; }
-        public Email ContactEmail { get; set; }
+        public OrgInformation OrgInfo { get; set; }
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
         public ModifiedInfo ModifiedInfo { get; private set; }

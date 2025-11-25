@@ -122,14 +122,20 @@ namespace ODP_Studio_Api.Infrastructure.Persistence.Context
             builder.Property(o => o.OrgName).IsRequired().HasMaxLength(200);
             builder.Property(o => o.PhoneNumber).HasMaxLength(20);
 
-            builder.OwnsOne(o => o.Address, addr =>
+            builder.OwnsOne(o => o.OrgInfo, OrgInfo =>
             {
-                addr.Property(a => a.Value).HasColumnName("Address");
+                OrgInfo.OwnsOne( a => a.Address, addr =>
+                {
+                   addr.Property(a => a.Value).HasColumnName("Address");
+                });
             });
 
-            builder.OwnsOne(o => o.ContactEmail, email =>
+            builder.OwnsOne(o => o.OrgInfo, OrgInfo =>
             {
-                email.Property(e => e.Value).HasColumnName("ContactEmail").IsRequired();
+                OrgInfo.OwnsOne( c => c.ContactEmail, email =>
+                {
+                    email.Property(e => e.Value).HasColumnName("ContactEmail").IsRequired();
+                });
             });
 
             builder.HasMany(o => o.OrphanOrgs)

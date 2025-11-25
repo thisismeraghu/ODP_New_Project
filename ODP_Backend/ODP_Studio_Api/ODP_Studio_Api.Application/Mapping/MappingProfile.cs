@@ -3,6 +3,7 @@ using ODP_Studio_Api.Application.Commands;
 using ODP_Studio_Api.Application.DTOs.CommonDTOs;
 using ODP_Studio_Api.Application.DTOs.RequestDTOs;
 using ODP_Studio_Api.Application.DTOs.ResponseDTOs;
+using ODP_Studio_Api.Application.Queries;
 using ODP_Studio_Api.Domain.Entities;
 using ODP_Studio_Api.Domain.ModelDTOs;
 using ODP_Studio_Api.Domain.ValueObjects;
@@ -58,13 +59,25 @@ namespace ODP_Studio_Api.Application.Mapping
 
             CreateMap<Orphan, UpdateOrphanCommand>().ReverseMap();
 
+            // CreateMap<Org, GetOrgByIdRequestDto>().ReverseMap();
+
+            //CreateMap<OrgInfoDto, OrgResponseDto>().ReverseMap();
+
 
             // Map child entity and DTO
             CreateMap<OrphanInfoWithOrgDto, OrphanDetailsDto>()
                 .ForMember(dest => dest.OrphansInfo, opt => opt.MapFrom(src => src.Orphan)).ReverseMap();
-               
+            CreateMap<OrgInfoDto, OrgResponseDto>()
+                .ForMember(dest => dest.orgDto, opt => opt.MapFrom(src => src.Org)).ReverseMap();
+
+            CreateMap<Org, OrgDto>().ReverseMap();
             CreateMap<Orphan, OrphanResponseDto>().ReverseMap();
             CreateMap<CreateOrphanResponseDto, OrphanSummaryDto>().ReverseMap();
+
+            CreateMap< GetOrgByIdRequestDto, GetOrgByOrdIdQuery>()
+                .ForMember(dest => dest.OrgId, opt => opt.MapFrom(src => src.OrgId)).ReverseMap();
+            //CreateMap<Org, OrgDto>().ReverseMap();
+            //CreateMap<Org, OrgResponseDto>().ReverseMap();
 
             // Map wrapper DTOs
             CreateMap<OrphanListResponseDto, OrphansListDto>()
@@ -75,6 +88,23 @@ namespace ODP_Studio_Api.Application.Mapping
 
 
             // CreateMap<Orphan, OrphanResponseDto>();
+            CreateMap<CreateOrgResponseDto, OrgCreateSummaryDto>().ReverseMap();
+            //CreateMap<CreateOrgCommand, CreateOrgRequestDto>().ReverseMap()
+            //.ForMember(dest => dest.Org, opt => opt.MapFrom(src => src));
+            CreateMap<CreateOrgRequestDto, Org>().ReverseMap()
+                .ForMember(dest => dest.ModifiedInfo, opt=> opt.MapFrom(src => src.ModifiedInfo)).ReverseMap();
+            CreateMap<CreateOrgRequestDto, Org>().ReverseMap()
+                .ForMember(dest => dest.OrgInfo, opt => opt.MapFrom(src => src.OrgInfo)).ReverseMap();
+            //CreateMap<CreateOrgCommand, Org>().ReverseMap()
+            //     .ForPath(dest => dest.Org.ModifiedInfo, opt => opt.MapFrom(src => src.ModifiedInfo)).ReverseMap();
+            //CreateMap<CreateOrgCommand, Org>().ReverseMap()
+            //    .ForPath(dest => dest.Org.OrgInfo, opt => opt.MapFrom(src => src.ModifiedInfo)).ReverseMap();
+            CreateMap<OrgInformationDto, OrgInformation>().ReverseMap();
+            CreateMap<OrgInformationDto, OrgInformation>().ReverseMap();
+            CreateMap<ModifiedInformationDto, ModifiedInfo>().ReverseMap();
+            CreateMap<UpdateOrgRequestDto, UpdateOrgCommand>().ReverseMap();
+            CreateMap<Org, UpdateOrgCommand>().ReverseMap();
+
 
         }
     }
