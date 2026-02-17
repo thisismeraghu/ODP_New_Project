@@ -72,8 +72,14 @@ namespace ODP_Studio_Api.Controllers
 
         [HttpPut("{OrgId:Guid}")]
 
-        public async Task<IActionResult> UpdateOrg(Guid OrgId, [FromBody] UpdateOrgRequestDto request)
+        public async Task<IActionResult> UpdateOrg(Guid OrgId, [FromBody] UpdateOrgRequestDto request, [FromServices] IValidator<UpdateOrgRequestDto> validator)
         {
+            var validationResult = await validator.ValidateAsync(request);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+
+            }
             if (OrgId != request.OrgId)
             { 
                 return BadRequest(new ApiResponse<string>($"Org ID mismatch.", 400, new List<string> { "Orphan ID in URL and body do not match" }));

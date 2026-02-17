@@ -48,6 +48,7 @@ builder.Services.AddScoped<IValidator<CreateOrphanRequestDto>, CreateOrphanDtoVa
 builder.Services.AddScoped<IValidator<UpdateOrphanRequestDto>, UpdateOrphanRequestDtoValidator>();
 builder.Services.AddScoped<IValidator<GetOrgByIdRequestDto>,GetOrgByIdRequestValidator>();
 builder.Services.AddScoped<IValidator<CreateOrgRequestDto>, CreateOrgRequestDtoValidators>();
+builder.Services.AddScoped<IValidator<UpdateOrgRequestDto>, UpdateOrgRequestDtoValidator>();
 
 //builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
